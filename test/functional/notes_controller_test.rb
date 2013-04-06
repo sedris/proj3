@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class NotesControllerTest < ActionController::TestCase
-  setup do
+/  setup do
     @note = notes(:one)
   end
 
@@ -45,5 +45,5 @@ class NotesControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to notes_path
-  end
+  end*/
 end

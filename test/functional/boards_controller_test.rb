@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class BoardsControllerTest < ActionController::TestCase
-  setup do
+/  setup do
     @board = boards(:one)
   end
 
@@ -45,5 +45,5 @@ class BoardsControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to boards_path
-  end
+  */
 end

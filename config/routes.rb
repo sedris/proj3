@@ -6,10 +6,10 @@ SedrisProj3::Application.routes.draw do
   resources :sessions
   resources :users
 
-  resources :boards
-
-  resources :notes
-
+  resources :boards do
+    resources :notes
+  end
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

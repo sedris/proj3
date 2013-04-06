@@ -1,0 +1,885 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (2.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (3.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)
+  [1m[35m (3.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (3.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (3.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (3.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (3.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:03:51', '2013-04-06 17:03:51', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:03:51', '2013-04-06 17:03:51', 206669143)
+  [1m[35m (2.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:05:07', '2013-04-06 17:05:07', 980190962)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:05:07', '2013-04-06 17:05:07', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:05:07', '2013-04-06 17:05:07', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:05:07', '2013-04-06 17:05:07', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:05:07', '2013-04-06 17:05:07', 206669143)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "id") VALUES ('user2', 'user2', '2013-04-06 17:05:07', '2013-04-06 17:05:07', 358143215)
+  [1m[36m (139.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 206669143]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "boards" WHERE "boards"."user_id" = 206669143
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (46.0ms)[0m  INSERT INTO "boards" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Sat, 06 Apr 2013 17:05:07 UTC +00:00], ["name", ""], ["updated_at", Sat, 06 Apr 2013 17:05:07 UTC +00:00], ["user_id", 206669143]]
+  [1m[36m (1.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (2.0ms)[0m  [1mUPDATE "boards" SET "name" = 'Board 980190963', "updated_at" = '2013-04-06 17:05:07.523536' WHERE "boards"."id" = 980190963[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (3.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:05:18', '2013-04-06 17:05:18', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:05:18', '2013-04-06 17:05:18', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:05:18', '2013-04-06 17:05:18', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:05:18', '2013-04-06 17:05:18', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "id") VALUES ('user1', 'user1', '2013-04-06 17:05:18', '2013-04-06 17:05:18', 206669143)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "id") VALUES ('user2', 'user2', '2013-04-06 17:05:18', '2013-04-06 17:05:18', 358143215)
+  [1m[36m (160.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mBoard Load (1.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "boards" 
+Processing by BoardsController#create as HTML
+  Parameters: {"board"=>{"name"=>"MyString"}}
+  [1m[36m (1.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (10.0ms)[0m  INSERT INTO "boards" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Sat, 06 Apr 2013 17:05:18 UTC +00:00], ["name", "MyString"], ["updated_at", Sat, 06 Apr 2013 17:05:18 UTC +00:00], ["user_id", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/boards/980190963
+Completed 302 Found in 19ms (ActiveRecord: 11.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "boards" 
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mBoard Load (0.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "boards" 
+Processing by BoardsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mBoard Load (0.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."board_id" = 980190962[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "boards" WHERE "boards"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/boards
+Completed 302 Found in 95ms (ActiveRecord: 2.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "boards" 
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mBoard Load (1.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by BoardsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mBoard Load (0.0ms)[0m  SELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1  [["id", "980190962"]]
+  Rendered boards/_form.html.erb (119.0ms)
+Completed 200 OK in 377ms (Views: 373.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mBoard Load (1.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by BoardsController#index as HTML
+  [1m[35mBoard Load (1.0ms)[0m  SELECT "boards".* FROM "boards" 
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mBoard Load (1.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by BoardsController#new as HTML
+  Rendered boards/_form.html.erb (5.0ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mBoard Load (1.0ms)[0m  SELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by BoardsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mBoard Load (0.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mBoard Load (0.0ms)[0m  SELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by BoardsController#update as HTML
+  Parameters: {"board"=>{"name"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mBoard Load (1.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (1.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/boards/980190962
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notes" [0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notes" [0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:06:48', '2013-04-06 17:06:48', 980190962)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:06:48', '2013-04-06 17:06:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:06:48', '2013-04-06 17:06:48', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:06:48', '2013-04-06 17:06:48', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "id") VALUES ('one', 'one', '2013-04-06 17:06:48', '2013-04-06 17:06:48', 980190962)[0m
+  [1m[35m (143.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "boards" WHERE "boards"."user_id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (44.0ms)[0m  [1mINSERT INTO "boards" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 06 Apr 2013 17:06:49 UTC +00:00], ["name", ""], ["updated_at", Sat, 06 Apr 2013 17:06:49 UTC +00:00], ["user_id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  UPDATE "boards" SET "name" = 'Board 980190963', "updated_at" = '2013-04-06 17:06:49.116347' WHERE "boards"."id" = 980190963
+  [1m[36m (1.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:06:58', '2013-04-06 17:06:58', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:06:58', '2013-04-06 17:06:58', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:06:59', '2013-04-06 17:06:59', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:06:59', '2013-04-06 17:06:59', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "id") VALUES ('one', 'one', '2013-04-06 17:06:59', '2013-04-06 17:06:59', 980190962)[0m
+  [1m[35m (167.0ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mBoard Load (1.0ms)[0m  SELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "boards" [0m
+Processing by BoardsController#create as HTML
+  Parameters: {"board"=>{"name"=>"MyString"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (10.0ms)[0m  [1mINSERT INTO "boards" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 06 Apr 2013 17:06:59 UTC +00:00], ["name", "MyString"], ["updated_at", Sat, 06 Apr 2013 17:06:59 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/boards/980190963
+Completed 302 Found in 22ms (ActiveRecord: 10.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "boards" [0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mBoard Load (0.0ms)[0m  SELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "boards" [0m
+Processing by BoardsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mBoard Load (0.0ms)[0m  SELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."board_id" = 980190962
+  [1m[36mSQL (3.0ms)[0m  [1mDELETE FROM "boards" WHERE "boards"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/boards
+Completed 302 Found in 98ms (ActiveRecord: 3.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "boards" [0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mBoard Load (1.0ms)[0m  SELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by BoardsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mBoard Load (1.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  Rendered boards/_form.html.erb (37.0ms)
+Completed 200 OK in 167ms (Views: 165.0ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mBoard Load (0.0ms)[0m  SELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by BoardsController#index as HTML
+  [1m[36mBoard Load (1.0ms)[0m  [1mSELECT "boards".* FROM "boards" [0m
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mBoard Load (1.0ms)[0m  SELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by BoardsController#new as HTML
+  Rendered boards/_form.html.erb (5.0ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mBoard Load (0.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by BoardsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mBoard Load (0.0ms)[0m  SELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mBoard Load (0.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by BoardsController#update as HTML
+  Parameters: {"board"=>{"name"=>"MyString"}, "id"=>"980190962"}
+  [1m[35mBoard Load (1.0ms)[0m  SELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (1.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/boards/980190962
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "notes" 
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "notes" 
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"password_digest"=>"[FILTERED]", "username"=>"one"}}
+Completed 500 Internal Server Error in 1ms
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBoard Load (0.0ms)[0m  SELECT "boards".* FROM "boards" WHERE "boards"."user_id" = 980190962
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/users
+Completed 302 Found in 10ms (ActiveRecord: 2.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  Rendered users/_form.html.erb (7.0ms)
+Completed 200 OK in 54ms (Views: 52.0ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (5.0ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"password_digest"=>"[FILTERED]", "username"=>"one"}, "id"=>"980190962"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 500 Internal Server Error in 5ms
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:09:46', '2013-04-06 17:09:46', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:09:46', '2013-04-06 17:09:46', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:09:46', '2013-04-06 17:09:46', 980190962)
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:09:46', '2013-04-06 17:09:46', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "id") VALUES ('one', 'one', '2013-04-06 17:09:46', '2013-04-06 17:09:46', 980190962)[0m
+  [1m[35m (158.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "boards" WHERE "boards"."user_id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (39.0ms)[0m  [1mINSERT INTO "boards" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 06 Apr 2013 17:09:46 UTC +00:00], ["name", ""], ["updated_at", Sat, 06 Apr 2013 17:09:46 UTC +00:00], ["user_id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  UPDATE "boards" SET "name" = 'Board 980190963', "updated_at" = '2013-04-06 17:09:46.801510' WHERE "boards"."id" = 980190963
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:09:56', '2013-04-06 17:09:56', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:09:56', '2013-04-06 17:09:56', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:09:56', '2013-04-06 17:09:56', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:09:56', '2013-04-06 17:09:56', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "id") VALUES ('one', 'one', '2013-04-06 17:09:56', '2013-04-06 17:09:56', 980190962)[0m
+  [1m[35m (148.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mBoard Load (1.0ms)[0m  SELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "boards" [0m
+Processing by BoardsController#create as HTML
+  Parameters: {"board"=>{"name"=>"MyString"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (6.0ms)[0m  [1mINSERT INTO "boards" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 06 Apr 2013 17:09:56 UTC +00:00], ["name", "MyString"], ["updated_at", Sat, 06 Apr 2013 17:09:56 UTC +00:00], ["user_id", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/boards/980190963
+Completed 302 Found in 12ms (ActiveRecord: 6.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "boards" [0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mBoard Load (0.0ms)[0m  SELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "boards" [0m
+Processing by BoardsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mBoard Load (0.0ms)[0m  SELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."board_id" = 980190962
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "boards" WHERE "boards"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/boards
+Completed 302 Found in 72ms (ActiveRecord: 2.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "boards" [0m
+  [1m[35m (3.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mBoard Load (1.0ms)[0m  SELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by BoardsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mBoard Load (0.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  Rendered boards/_form.html.erb (39.0ms)
+Completed 200 OK in 167ms (Views: 164.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mBoard Load (0.0ms)[0m  SELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by BoardsController#index as HTML
+  [1m[36mBoard Load (0.0ms)[0m  [1mSELECT "boards".* FROM "boards" [0m
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mBoard Load (1.0ms)[0m  SELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by BoardsController#new as HTML
+  Rendered boards/_form.html.erb (5.0ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mBoard Load (1.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by BoardsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mBoard Load (0.0ms)[0m  SELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mBoard Load (0.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by BoardsController#update as HTML
+  Parameters: {"board"=>{"name"=>"MyString"}, "id"=>"980190962"}
+  [1m[35mBoard Load (1.0ms)[0m  SELECT "boards".* FROM "boards" WHERE "boards"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (1.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/boards/980190962
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "notes" 
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "notes" 
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+Processing by UsersController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBoard Load (0.0ms)[0m  SELECT "boards".* FROM "boards" WHERE "boards"."user_id" = 980190962
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/users
+Completed 302 Found in 13ms (ActiveRecord: 2.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "980190962"]]
+  Rendered users/_form.html.erb (8.0ms)
+Completed 200 OK in 28ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (5.0ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:11:35', '2013-04-06 17:11:35', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:11:35', '2013-04-06 17:11:35', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:11:35', '2013-04-06 17:11:35', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:11:35', '2013-04-06 17:11:35', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "id") VALUES ('one', 'one', '2013-04-06 17:11:35', '2013-04-06 17:11:35', 980190962)[0m
+  [1m[35m (107.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "boards" WHERE "boards"."user_id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (31.0ms)[0m  [1mINSERT INTO "boards" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 06 Apr 2013 17:11:35 UTC +00:00], ["name", ""], ["updated_at", Sat, 06 Apr 2013 17:11:35 UTC +00:00], ["user_id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  UPDATE "boards" SET "name" = 'Board 980190963', "updated_at" = '2013-04-06 17:11:35.769743' WHERE "boards"."id" = 980190963
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "boards" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 06 Apr 2013 17:11:35 UTC +00:00], ["name", "test"], ["updated_at", Sat, 06 Apr 2013 17:11:35 UTC +00:00], ["user_id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mBoard Load (1.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."user_id" = 980190962 AND "boards"."id" = 980190964 LIMIT 1[0m
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."board_id" = 980190964
+  [1m[36mBoard Load (1.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."user_id" = 980190962 AND "boards"."id" = ? LIMIT 1[0m  [["id", 980190964]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."board_id" = 980190964[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "boards" WHERE "boards"."id" = ?  [["id", 980190964]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (3.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:12:18', '2013-04-06 17:12:18', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:12:18', '2013-04-06 17:12:18', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:12:18', '2013-04-06 17:12:18', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:12:18', '2013-04-06 17:12:18', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "id") VALUES ('one', 'one', '2013-04-06 17:12:18', '2013-04-06 17:12:18', 980190962)[0m
+  [1m[35m (148.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "boards" WHERE "boards"."user_id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (44.0ms)[0m  [1mINSERT INTO "boards" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 06 Apr 2013 17:12:18 UTC +00:00], ["name", ""], ["updated_at", Sat, 06 Apr 2013 17:12:18 UTC +00:00], ["user_id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  UPDATE "boards" SET "name" = 'Board 980190963', "updated_at" = '2013-04-06 17:12:18.891209' WHERE "boards"."id" = 980190963
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "boards" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 06 Apr 2013 17:12:18 UTC +00:00], ["name", "test"], ["updated_at", Sat, 06 Apr 2013 17:12:18 UTC +00:00], ["user_id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mBoard Load (0.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."user_id" = 980190962 AND "boards"."id" = 980190964 LIMIT 1[0m
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."board_id" = 980190964
+  [1m[36mBoard Load (0.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."user_id" = 980190962 AND "boards"."id" = ? LIMIT 1[0m  [["id", 980190964]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."board_id" = 980190964[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "boards" WHERE "boards"."id" = ?  [["id", 980190964]]
+  [1m[36m (1.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (3.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:13:02', '2013-04-06 17:13:02', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:13:02', '2013-04-06 17:13:02', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:13:03', '2013-04-06 17:13:03', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:13:03', '2013-04-06 17:13:03', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "id") VALUES ('one', 'one', '2013-04-06 17:13:03', '2013-04-06 17:13:03', 980190962)[0m
+  [1m[35m (126.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "boards" WHERE "boards"."user_id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (44.0ms)[0m  [1mINSERT INTO "boards" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 06 Apr 2013 17:13:03 UTC +00:00], ["name", ""], ["updated_at", Sat, 06 Apr 2013 17:13:03 UTC +00:00], ["user_id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  UPDATE "boards" SET "name" = 'Board 980190963', "updated_at" = '2013-04-06 17:13:03.331751' WHERE "boards"."id" = 980190963
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "boards" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 06 Apr 2013 17:13:03 UTC +00:00], ["name", "test"], ["updated_at", Sat, 06 Apr 2013 17:13:03 UTC +00:00], ["user_id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mBoard Load (0.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."user_id" = 980190962 AND "boards"."id" = 980190964 LIMIT 1[0m
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."board_id" = 980190964
+  [1m[36mBoard Load (1.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."user_id" = 980190962 AND "boards"."id" = ? LIMIT 1[0m  [["id", 980190964]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."board_id" = 980190964[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "boards" WHERE "boards"."id" = ?  [["id", 980190964]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (3.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:13:36', '2013-04-06 17:13:36', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2013-04-06 17:13:36', '2013-04-06 17:13:36', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:13:36', '2013-04-06 17:13:36', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:13:36', '2013-04-06 17:13:36', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "id") VALUES ('one', 'one', '2013-04-06 17:13:36', '2013-04-06 17:13:36', 980190962)[0m
+  [1m[35m (147.0ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "boards" WHERE "boards"."user_id" = 980190962[0m
+  [1m[35m (1.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (45.0ms)[0m  [1mINSERT INTO "boards" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 06 Apr 2013 17:13:37 UTC +00:00], ["name", ""], ["updated_at", Sat, 06 Apr 2013 17:13:37 UTC +00:00], ["user_id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  UPDATE "boards" SET "name" = 'Board 980190963', "updated_at" = '2013-04-06 17:13:37.254691' WHERE "boards"."id" = 980190963
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "boards" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 06 Apr 2013 17:13:37 UTC +00:00], ["name", "test"], ["updated_at", Sat, 06 Apr 2013 17:13:37 UTC +00:00], ["user_id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mBoard Load (0.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."user_id" = 980190962 AND "boards"."id" = 980190964 LIMIT 1[0m
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."board_id" = 980190964
+  [1m[36mBoard Load (0.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."user_id" = 980190962 AND "boards"."id" = ? LIMIT 1[0m  [["id", 980190964]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."board_id" = 980190964[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "boards" WHERE "boards"."id" = ?  [["id", 980190964]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "boards"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('one', '2013-04-06 17:22:11', '2013-04-06 17:22:11', 980190962)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "boards" ("name", "created_at", "updated_at", "id") VALUES ('two', '2013-04-06 17:22:11', '2013-04-06 17:22:11', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:22:11', '2013-04-06 17:22:11', 980190962)
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "notes" ("title", "body", "x", "y", "width", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 1, 1, 1, '2013-04-06 17:22:11', '2013-04-06 17:22:11', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "id") VALUES ('one', 'one', '2013-04-06 17:22:11', '2013-04-06 17:22:11', 980190962)[0m
+  [1m[35m (113.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (10.0ms)[0m  INSERT INTO "boards" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Sat, 06 Apr 2013 17:22:11 UTC +00:00], ["name", "board"], ["updated_at", Sat, 06 Apr 2013 17:22:11 UTC +00:00], ["user_id", 980190962]]
+  [1m[36m (1.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mBoard Load (1.0ms)[0m  SELECT "boards".* FROM "boards" WHERE "boards"."user_id" = 980190962 ORDER BY "boards"."id" DESC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "notes" ("board_id", "body", "created_at", "title", "updated_at", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["board_id", 980190963], ["body", ""], ["created_at", Sat, 06 Apr 2013 17:22:11 UTC +00:00], ["title", ""], ["updated_at", Sat, 06 Apr 2013 17:22:11 UTC +00:00], ["width", 100], ["x", 0], ["y", 0]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "notes" WHERE "notes"."board_id" = 980190963
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "notes" ("board_id", "body", "created_at", "title", "updated_at", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["board_id", 980190963], ["body", ""], ["created_at", Sat, 06 Apr 2013 17:22:11 UTC +00:00], ["title", {:title=>"title", :body=>"body", :width=>20, :x=>200, :y=>100}], ["updated_at", Sat, 06 Apr 2013 17:22:11 UTC +00:00], ["width", 100], ["x", 0], ["y", 0]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "notes" WHERE "notes"."board_id" = 980190963
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."board_id" = 980190963 AND "notes"."id" = 980190963 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "notes" WHERE "notes"."id" = ?[0m  [["id", 980190963]]
+  [1m[35m (1.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notes" WHERE "notes"."board_id" = 980190963[0m
+  [1m[35m (3.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "boards" WHERE "boards"."user_id" = 980190962[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "boards" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 06 Apr 2013 17:22:11 UTC +00:00], ["name", ""], ["updated_at", Sat, 06 Apr 2013 17:22:11 UTC +00:00], ["user_id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  UPDATE "boards" SET "name" = 'Board 980190963', "updated_at" = '2013-04-06 17:22:11.737118' WHERE "boards"."id" = 980190963
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "boards" ("created_at", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 06 Apr 2013 17:22:11 UTC +00:00], ["name", "test"], ["updated_at", Sat, 06 Apr 2013 17:22:11 UTC +00:00], ["user_id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mBoard Load (0.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."user_id" = 980190962 AND "boards"."id" = 980190964 LIMIT 1[0m
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."board_id" = 980190964
+  [1m[36mBoard Load (0.0ms)[0m  [1mSELECT "boards".* FROM "boards" WHERE "boards"."user_id" = 980190962 AND "boards"."id" = ? LIMIT 1[0m  [["id", 980190964]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."board_id" = 980190964[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "boards" WHERE "boards"."id" = ?  [["id", 980190964]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (3.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml

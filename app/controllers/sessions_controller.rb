@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
         flash.now.alert = "invalid email or password"
         render "new"
     end
+    #render :partial => 'preview', :content_type => 'text/html'
   end
 
   def destroy
