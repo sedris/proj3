@@ -1,6 +1,6 @@
 <% if !current_user %>
 <h1>Log in</h1>
-	<%= form_tag sessions_path, :class => "form", :remote => true, :'data-update-target' => 'update-container' do %>
+	<%= form_tag sessions_path, :class => "form" do %>
 	<div class= "field">
 		<%= label_tag :username %>
 		<%= text_field_tag :username, params[:username] %>
@@ -12,12 +12,9 @@
 	</div>
 
 	<div class = "actions">
-		<%= submit_tag "log in", :disable_with => 'Please wait...', :class => "submit" %>
+		<%= submit_tag "log in", :class => "submit" %>
 	</div>
 	<% end %>
 <% else %>
 	Logged in
 <% end %>
-	<div id="update-container">
-	test
-	</div>

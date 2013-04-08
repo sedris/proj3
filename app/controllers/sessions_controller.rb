@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
-
+  skip_before_filter :authenticate, :only => [:new, :create]
+  
   respond_to :http, :js
   def new
   end
@@ -18,13 +19,11 @@ class SessionsController < ApplicationController
       respond_to do |format|
       if user && user.authenticate(params[:password])
         session[:user_id] = user.id
-        format.html { redirect_to root_url, notice: 'logged in' }
+        format.html { redirect_to notes_url }
         format.json { head :no_content }
-        format.js { render :layout => false }
       else
         format.html { render :text => "error" }
         format.json { render json: {:error => "invalid email or password"}, status: :unprocessable_entity }
-        format.js { render :layout => false }
       end
     end
     #render :partial => 'preview', :content_type => 'text/html'
