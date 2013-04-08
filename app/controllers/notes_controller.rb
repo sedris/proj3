@@ -55,7 +55,7 @@ class NotesController < ApplicationController
       else
         format.html { render action: "new" }
         format.json { render json: @note.errors, status: :unprocessable_entity }
-        format.js { render :layout => false }
+        
       end
     end
   end
@@ -64,9 +64,11 @@ class NotesController < ApplicationController
   # PUT /notes/1.json
   def update
     @note = Note.find(params[:id])
+    #updatedNote = {params}
 
     respond_to do |format|
-      if @note.update_attributes(params[:note])
+      #if @note.update_attributes(params[:note])
+      if @note.update_attributes(:x => params[:x], :y => params[:y], :body=>params[:body], :width=>params[:width], :height=>params[:height])
         format.html { redirect_to @note, notice: 'Note was successfully updated.' }
         format.json { head :no_content }
       else

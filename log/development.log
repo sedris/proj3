@@ -26077,3 +26077,3629 @@ Processing by NotesController#destroy as JS
   [1m[36m (154.0ms)[0m  [1mcommit transaction[0m
   Rendered notes/destroy.js.erb (0.0ms)
 Completed 200 OK in 166ms (Views: 5.0ms | ActiveRecord: 158.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 22:34:23 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 22:34:23 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 22:34:23 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 22:34:23 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 22:34:23 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 22:34:23 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 22:34:23 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 22:34:24 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 22:34:24 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 22:34:24 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 22:34:24 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 22:34:24 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 22:34:24 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 22:34:24 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/notes" for 127.0.0.1 at 2013-04-07 22:34:28 -0400
+Processing by NotesController#create as JS
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "notes" ("board_id", "body", "created_at", "title", "updated_at", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["board_id", nil], ["body", ""], ["created_at", Mon, 08 Apr 2013 02:34:28 UTC +00:00], ["title", ""], ["updated_at", Mon, 08 Apr 2013 02:34:28 UTC +00:00], ["width", 200], ["x", 0], ["y", 0]]
+  [1m[36m (149.0ms)[0m  [1mcommit transaction[0m
+  Rendered notes/create.js.erb (1.0ms)
+Completed 200 OK in 163ms (Views: 6.0ms | ActiveRecord: 152.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 22:34:29 -0400
+Processing by NotesController#index as */*
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 22:34:32 -0400
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 22:34:33 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 22:34:33 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 22:34:33 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 22:34:33 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 22:34:33 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 22:34:33 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 22:34:33 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 22:34:33 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 22:34:33 -0400
+Served asset /boards.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 22:34:33 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 22:34:33 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 22:34:33 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 22:34:33 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started DELETE "/notes/42" for 127.0.0.1 at 2013-04-07 22:34:45 -0400
+Processing by NotesController#destroy as JS
+  Parameters: {"id"=>"42"}
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", "42"]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "notes" WHERE "notes"."id" = ?  [["id", 42]]
+  [1m[36m (138.0ms)[0m  [1mcommit transaction[0m
+  Rendered notes/destroy.js.erb (0.0ms)
+Completed 200 OK in 152ms (Views: 6.0ms | ActiveRecord: 142.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 22:34:49 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 22:34:49 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 22:34:49 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 22:34:49 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 22:34:49 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 22:34:49 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 22:34:49 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 22:34:49 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 22:34:50 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 22:34:50 -0400
+Served asset /boards.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 22:34:50 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 22:34:50 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 22:34:50 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 22:34:50 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 22:40:24 -0400
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 45ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 22:40:24 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 22:40:24 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 22:40:24 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 22:40:24 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 22:40:24 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 22:40:25 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 22:40:25 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 22:40:25 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 22:40:25 -0400
+Served asset /boards.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 22:40:25 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 22:40:25 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 22:40:25 -0400
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 22:40:25 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+Connecting to database specified by database.yml
+
+
+Started POST "/notes" for 127.0.0.1 at 2013-04-07 22:53:09 -0400
+Processing by NotesController#create as JS
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "notes" ("board_id", "body", "created_at", "title", "updated_at", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["board_id", nil], ["body", ""], ["created_at", Mon, 08 Apr 2013 02:53:09 UTC +00:00], ["title", ""], ["updated_at", Mon, 08 Apr 2013 02:53:09 UTC +00:00], ["width", 200], ["x", 0], ["y", 0]]
+  [1m[35m (139.0ms)[0m  commit transaction
+  Rendered notes/create.js.erb (1.0ms)
+Completed 200 OK in 152ms (Views: 6.0ms | ActiveRecord: 142.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 22:53:09 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 22:53:11 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 55ms (Views: 51.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 22:53:12 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 22:53:12 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 22:53:12 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 22:53:12 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 22:53:12 -0400
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 22:53:12 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 22:53:12 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 22:53:12 -0400
+Served asset /boards.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 22:53:12 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 22:53:12 -0400
+Served asset /notes.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 22:53:12 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 22:53:12 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 22:53:12 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateNotes (20130403002402)
+Migrating to CreateBoards (20130403002426)
+Migrating to CreateUsers (20130403002507)
+Migrating to ChangeNotes (20130408024750)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  DROP INDEX "index_notes_on_board_id"
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "notes" ADD "height" number[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+
+
+Started POST "/notes" for 127.0.0.1 at 2013-04-07 23:02:35 -0400
+Processing by NotesController#create as JS
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "notes" ("board_id", "body", "created_at", "title", "updated_at", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["board_id", nil], ["body", ""], ["created_at", Mon, 08 Apr 2013 03:02:35 UTC +00:00], ["title", ""], ["updated_at", Mon, 08 Apr 2013 03:02:35 UTC +00:00], ["width", 200], ["x", 0], ["y", 0]]
+  [1m[36m (151.0ms)[0m  [1mcommit transaction[0m
+  Rendered notes/create.js.erb (0.0ms)
+Completed 200 OK in 164ms (Views: 5.0ms | ActiveRecord: 154.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:02:36 -0400
+Processing by NotesController#index as */*
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 63ms (Views: 60.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:02:38 -0400
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 42ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 23:02:38 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 23:02:38 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 23:02:38 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 23:02:38 -0400
+Served asset /notes.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 23:02:38 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 23:02:39 -0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 23:02:39 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 23:02:39 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 23:02:39 -0400
+Served asset /boards.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 23:02:39 -0400
+Served asset /notes.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 23:02:39 -0400
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 23:02:39 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 23:02:39 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:10:34 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 23:10:34 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 23:10:34 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 23:10:34 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 23:10:34 -0400
+Served asset /sessions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 23:10:34 -0400
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 23:10:35 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 23:10:35 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 23:10:35 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 23:10:35 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 23:10:35 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 23:10:35 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 23:10:35 -0400
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 23:10:35 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started DELETE "/notes/44" for 127.0.0.1 at 2013-04-07 23:10:45 -0400
+Processing by NotesController#destroy as JS
+  Parameters: {"id"=>"44"}
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "44"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "notes" WHERE "notes"."id" = ?[0m  [["id", 44]]
+  [1m[35m (94.0ms)[0m  commit transaction
+  Rendered notes/destroy.js.erb (0.0ms)
+Completed 200 OK in 108ms (Views: 7.0ms | ActiveRecord: 96.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:10:46 -0400
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 23:10:46 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 23:10:46 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 23:10:46 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 23:10:46 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 23:10:46 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 23:10:46 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 23:10:47 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 23:10:47 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 23:10:47 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 23:10:47 -0400
+Served asset /notes.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 23:10:47 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 23:10:47 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 23:10:47 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/notes" for 127.0.0.1 at 2013-04-07 23:10:50 -0400
+Processing by NotesController#create as JS
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "notes" ("board_id", "body", "created_at", "title", "updated_at", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["board_id", nil], ["body", ""], ["created_at", Mon, 08 Apr 2013 03:10:50 UTC +00:00], ["title", ""], ["updated_at", Mon, 08 Apr 2013 03:10:50 UTC +00:00], ["width", 200], ["x", 0], ["y", 0]]
+  [1m[35m (374.0ms)[0m  commit transaction
+  Rendered notes/create.js.erb (1.0ms)
+Completed 200 OK in 390ms (Views: 7.0ms | ActiveRecord: 377.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:10:50 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:10:54 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 23:10:54 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 23:10:54 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 23:10:54 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 23:10:54 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 23:10:54 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 23:10:54 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 23:10:54 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 23:10:54 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 23:10:54 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 23:10:54 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 23:10:54 -0400
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 23:10:55 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 23:10:55 -0400
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started DELETE "/notes/43" for 127.0.0.1 at 2013-04-07 23:11:04 -0400
+Processing by NotesController#destroy as JS
+  Parameters: {"id"=>"43"}
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "43"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mDELETE FROM "notes" WHERE "notes"."id" = ?[0m  [["id", 43]]
+  [1m[35m (102.0ms)[0m  commit transaction
+  Rendered notes/destroy.js.erb (0.0ms)
+Completed 200 OK in 149ms (Views: 40.0ms | ActiveRecord: 105.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:11:07 -0400
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 23:11:07 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 23:11:07 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 23:11:07 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 23:11:07 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 23:11:07 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 23:11:07 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 23:11:07 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 23:11:07 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 23:11:07 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 23:11:08 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 23:11:08 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 23:11:08 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 23:11:08 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:13:05 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/_note.html.erb (7.0ms)
+  Rendered notes/index.html.erb within layouts/application (18.0ms)
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+    56: });
+    57: </script>
+    58: 
+    59: <div class="stickyNote" data-noteId="<%= note.id %>" style="position:absolute; top:<%=note.y%>px; left:<%=note.x%>px;">
+    60:     <span class="delete_note" style="float:right;"> <%= link_to 'X', note, method: :delete, :remote => true, data: { confirm: 'Are you sure?' } %> </span>
+    61:     <div class='textarea' contenteditable="true"><%=note.body%></div>
+    62: </div>
+  app/views/notes/_note.html.erb:59:in `_app_views_notes__note_html_erb___326289305_28854108'
+  app/views/notes/index.html.erb:100:in `block in _app_views_notes_index_html_erb___119506290_28338432'
+  app/views/notes/index.html.erb:99:in `each'
+  app/views/notes/index.html.erb:99:in `_app_views_notes_index_html_erb___119506290_28338432'
+  app/controllers/notes_controller.rb:7:in `index'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (46.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:17:33 -0400
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/_note.html.erb (3.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 23:17:33 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 23:17:33 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 23:17:33 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 23:17:34 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 23:17:34 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 23:17:34 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 23:17:34 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 23:17:34 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 23:17:34 -0400
+Served asset /notes.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 23:17:34 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 23:17:34 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 23:17:34 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 23:17:34 -0400
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started DELETE "/notes/45" for 127.0.0.1 at 2013-04-07 23:17:49 -0400
+Processing by NotesController#destroy as JS
+  Parameters: {"id"=>"45"}
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", "45"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "notes" WHERE "notes"."id" = ?  [["id", 45]]
+  [1m[36m (98.0ms)[0m  [1mcommit transaction[0m
+  Rendered notes/destroy.js.erb (1.0ms)
+Completed 200 OK in 112ms (Views: 7.0ms | ActiveRecord: 101.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:17:50 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 23:17:51 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 23:17:51 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 23:17:51 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 23:17:51 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 23:17:51 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 23:17:51 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 23:17:51 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 23:17:51 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 23:17:51 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 23:17:51 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 23:17:51 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 23:17:51 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 23:17:51 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/notes" for 127.0.0.1 at 2013-04-07 23:17:54 -0400
+Processing by NotesController#create as JS
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "notes" ("board_id", "body", "created_at", "title", "updated_at", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["board_id", nil], ["body", ""], ["created_at", Mon, 08 Apr 2013 03:17:54 UTC +00:00], ["title", ""], ["updated_at", Mon, 08 Apr 2013 03:17:54 UTC +00:00], ["width", 200], ["x", 0], ["y", 0]]
+  [1m[36m (166.0ms)[0m  [1mcommit transaction[0m
+  Rendered notes/create.js.erb (0.0ms)
+Completed 200 OK in 180ms (Views: 6.0ms | ActiveRecord: 169.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:17:55 -0400
+Processing by NotesController#index as */*
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/_note.html.erb (5.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 65ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateNotes (20130403002402)
+Migrating to CreateBoards (20130403002426)
+Migrating to CreateUsers (20130403002507)
+Migrating to ChangeNotes (20130408024750)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  DROP INDEX "index_notes_on_board_id"
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "notes" ADD "height" number[0m
+  [1m[35m (1.0ms)[0m  CREATE TEMPORARY TABLE "altered_notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" varchar(255), "x" integer, "y" integer, "width" integer, "board_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "height" decimal) 
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "notes"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_notes" ("id","title","body","x","y","width","board_id","created_at","updated_at","height") VALUES (1, 'blah', 'testing', 100, 100, 200, NULL, '2013-04-07 23:18:15.955785', '2013-04-07 23:18:15.955785', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_notes" ("id","title","body","x","y","width","board_id","created_at","updated_at","height") VALUES (46, '', '', 0, 0, 200, NULL, '2013-04-08 03:17:54.948216', '2013-04-08 03:17:54.948216', NULL)[0m
+  [1m[35m (11.0ms)[0m  DROP TABLE "notes"
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar(255), "x" integer, "y" integer, "width" integer, "board_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "height" decimal) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "altered_notes"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "notes" ("id","body","x","y","width","board_id","created_at","updated_at","height") VALUES (1, 'testing', 100, 100, 200, NULL, '2013-04-07 23:18:15.955785', '2013-04-07 23:18:15.955785', NULL)[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "notes" ("id","body","x","y","width","board_id","created_at","updated_at","height") VALUES (46, '', 0, 0, 200, NULL, '2013-04-08 03:17:54.948216', '2013-04-08 03:17:54.948216', NULL)
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE "altered_notes"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130408024750')
+  [1m[36m (124.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to ChangeNotes (20130408024750)
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (3.0ms)[0m  [1mALTER TABLE "notes" ADD "title" varchar(255)[0m
+  [1m[35m (2.0ms)[0m  CREATE TEMPORARY TABLE "altered_notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar(255), "x" integer, "y" integer, "width" integer, "board_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "height" decimal, "title" varchar(255)) 
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "notes"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_notes" ("id","body","x","y","width","board_id","created_at","updated_at","height","title") VALUES (1, 'testing', 100, 100, 200, NULL, '2013-04-07 23:18:15.955785', '2013-04-07 23:18:15.955785', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_notes" ("id","body","x","y","width","board_id","created_at","updated_at","height","title") VALUES (46, '', 0, 0, 200, NULL, '2013-04-08 03:17:54.948216', '2013-04-08 03:17:54.948216', NULL, NULL)[0m
+  [1m[35m (2.0ms)[0m  DROP TABLE "notes"
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar(255), "x" integer, "y" integer, "width" integer, "board_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "title" varchar(255)) [0m
+  [1m[35m (1.0ms)[0m  SELECT * FROM "altered_notes"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "notes" ("id","body","x","y","width","board_id","created_at","updated_at","title") VALUES (1, 'testing', 100, 100, 200, NULL, '2013-04-07 23:18:15.955785', '2013-04-07 23:18:15.955785', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "notes" ("id","body","x","y","width","board_id","created_at","updated_at","title") VALUES (46, '', 0, 0, 200, NULL, '2013-04-08 03:17:54.948216', '2013-04-08 03:17:54.948216', NULL)
+  [1m[36m (2.0ms)[0m  [1mDROP TABLE "altered_notes"[0m
+  [1m[35m (0.0ms)[0m  CREATE INDEX "index_notes_on_board_id" ON "notes" ("board_id")
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20130408024750'[0m
+  [1m[35m (156.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateNotes (20130403002402)
+Migrating to CreateBoards (20130403002426)
+Migrating to CreateUsers (20130403002507)
+Migrating to ChangeNotes (20130408024750)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  DROP INDEX "index_notes_on_board_id"
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "notes" ADD "height" integer[0m
+  [1m[35m (1.0ms)[0m  CREATE TEMPORARY TABLE "altered_notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar(255), "x" integer, "y" integer, "width" integer, "board_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "title" varchar(255), "height" integer) 
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "notes"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_notes" ("id","body","x","y","width","board_id","created_at","updated_at","title","height") VALUES (1, 'testing', 100, 100, 200, NULL, '2013-04-07 23:18:15.955785', '2013-04-07 23:18:15.955785', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_notes" ("id","body","x","y","width","board_id","created_at","updated_at","title","height") VALUES (46, '', 0, 0, 200, NULL, '2013-04-08 03:17:54.948216', '2013-04-08 03:17:54.948216', NULL, NULL)[0m
+  [1m[35m (1.0ms)[0m  DROP TABLE "notes"
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar(255), "x" integer, "y" integer, "width" integer, "board_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "height" integer) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "altered_notes"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "notes" ("id","body","x","y","width","board_id","created_at","updated_at","height") VALUES (1, 'testing', 100, 100, 200, NULL, '2013-04-07 23:18:15.955785', '2013-04-07 23:18:15.955785', NULL)[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "notes" ("id","body","x","y","width","board_id","created_at","updated_at","height") VALUES (46, '', 0, 0, 200, NULL, '2013-04-08 03:17:54.948216', '2013-04-08 03:17:54.948216', NULL)
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE "altered_notes"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130408024750')
+  [1m[36m (150.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to ChangeNotes (20130408024750)
+  [1m[36m (1.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (2.0ms)[0m  [1mALTER TABLE "notes" ADD "title" varchar(255)[0m
+  [1m[35m (2.0ms)[0m  CREATE TEMPORARY TABLE "altered_notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar(255), "x" integer, "y" integer, "width" integer, "board_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "height" integer, "title" varchar(255)) 
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "notes"[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "altered_notes" ("id","body","x","y","width","board_id","created_at","updated_at","height","title") VALUES (1, 'testing', 100, 100, 200, NULL, '2013-04-07 23:18:15.955785', '2013-04-07 23:18:15.955785', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_notes" ("id","body","x","y","width","board_id","created_at","updated_at","height","title") VALUES (46, '', 0, 0, 200, NULL, '2013-04-08 03:17:54.948216', '2013-04-08 03:17:54.948216', NULL, NULL)[0m
+  [1m[35m (2.0ms)[0m  DROP TABLE "notes"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar(255), "x" integer, "y" integer, "width" integer, "board_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "title" varchar(255)) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "altered_notes"
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "notes" ("id","body","x","y","width","board_id","created_at","updated_at","title") VALUES (1, 'testing', 100, 100, 200, NULL, '2013-04-07 23:18:15.955785', '2013-04-07 23:18:15.955785', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "notes" ("id","body","x","y","width","board_id","created_at","updated_at","title") VALUES (46, '', 0, 0, 200, NULL, '2013-04-08 03:17:54.948216', '2013-04-08 03:17:54.948216', NULL)
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE "altered_notes"[0m
+  [1m[35m (0.0ms)[0m  CREATE INDEX "index_notes_on_board_id" ON "notes" ("board_id")
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20130408024750'[0m
+  [1m[35m (293.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateNotes (20130403002402)
+Migrating to CreateBoards (20130403002426)
+Migrating to CreateUsers (20130403002507)
+Migrating to ChangeNotes (20130408024750)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  DROP INDEX "index_notes_on_board_id"
+  [1m[36m (6.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar(255), "x" integer, "y" integer, "width" integer, "board_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "title" varchar(255)) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "notes"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_notes" ("id","body","x","y","width","board_id","created_at","updated_at","title") VALUES (1, 'testing', 100, 100, 200, NULL, '2013-04-07 23:18:15.955785', '2013-04-07 23:18:15.955785', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_notes" ("id","body","x","y","width","board_id","created_at","updated_at","title") VALUES (46, '', 0, 0, 200, NULL, '2013-04-08 03:17:54.948216', '2013-04-08 03:17:54.948216', NULL)
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE "notes"[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar(255), "x" integer, "y" integer, "width" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "title" varchar(255)) 
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_notes"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "notes" ("id","body","x","y","width","created_at","updated_at","title") VALUES (1, 'testing', 100, 100, 200, '2013-04-07 23:18:15.955785', '2013-04-07 23:18:15.955785', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "notes" ("id","body","x","y","width","created_at","updated_at","title") VALUES (46, '', 0, 0, 200, '2013-04-08 03:17:54.948216', '2013-04-08 03:17:54.948216', NULL)[0m
+  [1m[35m (2.0ms)[0m  DROP TABLE "altered_notes"
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "notes" ADD "height" integer[0m
+  [1m[35m (1.0ms)[0m  CREATE TEMPORARY TABLE "altered_notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar(255), "x" integer, "y" integer, "width" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "title" varchar(255), "height" integer) 
+  [1m[36m (1.0ms)[0m  [1mSELECT * FROM "notes"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_notes" ("id","body","x","y","width","created_at","updated_at","title","height") VALUES (1, 'testing', 100, 100, 200, '2013-04-07 23:18:15.955785', '2013-04-07 23:18:15.955785', NULL, NULL)
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "altered_notes" ("id","body","x","y","width","created_at","updated_at","title","height") VALUES (46, '', 0, 0, 200, '2013-04-08 03:17:54.948216', '2013-04-08 03:17:54.948216', NULL, NULL)[0m
+  [1m[35m (1.0ms)[0m  DROP TABLE "notes"
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar(255), "x" integer, "y" integer, "width" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "height" integer) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "altered_notes"
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "notes" ("id","body","x","y","width","created_at","updated_at","height") VALUES (1, 'testing', 100, 100, 200, '2013-04-07 23:18:15.955785', '2013-04-07 23:18:15.955785', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "notes" ("id","body","x","y","width","created_at","updated_at","height") VALUES (46, '', 0, 0, 200, '2013-04-08 03:17:54.948216', '2013-04-08 03:17:54.948216', NULL)
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE "altered_notes"[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130408024750')
+  [1m[36m (244.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:37:32 -0400
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 95ms (Views: 66.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 23:37:33 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 23:37:33 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 23:37:33 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 23:37:33 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 23:37:33 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 23:37:33 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 23:37:33 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 23:37:33 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 23:37:33 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 23:37:33 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 23:37:33 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 23:37:33 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 23:37:33 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:38:01 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 23:38:02 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 23:38:02 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 23:38:02 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 23:38:02 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 23:38:02 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 23:38:02 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 23:38:02 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 23:38:02 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 23:38:02 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 23:38:02 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 23:38:02 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 23:38:03 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 23:38:03 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started POST "/notes" for 127.0.0.1 at 2013-04-07 23:38:10 -0400
+Processing by NotesController#create as JS
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "notes" ("body", "created_at", "height", "updated_at", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?)  [["body", ""], ["created_at", Mon, 08 Apr 2013 03:38:10 UTC +00:00], ["height", 200], ["updated_at", Mon, 08 Apr 2013 03:38:10 UTC +00:00], ["width", 200], ["x", 0], ["y", 0]]
+  [1m[36m (115.0ms)[0m  [1mcommit transaction[0m
+  Rendered notes/create.js.erb (0.0ms)
+Completed 200 OK in 132ms (Views: 6.0ms | ActiveRecord: 119.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:38:10 -0400
+Processing by NotesController#index as */*
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 53ms (Views: 50.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:38:13 -0400
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 107ms (Views: 105.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 23:38:14 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 23:38:14 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 23:38:14 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 23:38:14 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 23:38:14 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 23:38:14 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 23:38:14 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 23:38:14 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 23:38:14 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 23:38:14 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 23:38:14 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 23:38:15 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 23:38:15 -0400
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:44:40 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 58ms (Views: 55.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 23:44:40 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 23:44:40 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 23:44:40 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 23:44:40 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 23:44:40 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 23:44:41 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 23:44:41 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 23:44:41 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 23:44:41 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 23:44:41 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 23:44:41 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 23:44:41 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 23:44:41 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:47:31 -0400
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 23:47:32 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 23:47:32 -0400
+Served asset /boards.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 23:47:32 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 23:47:32 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 23:47:32 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 23:47:32 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 23:47:32 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 23:47:32 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 23:47:32 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 23:47:32 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 23:47:32 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 23:47:32 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 23:47:32 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/notes" for 127.0.0.1 at 2013-04-07 23:47:41 -0400
+Processing by NotesController#create as JS
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "notes" ("body", "created_at", "height", "updated_at", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", ""], ["created_at", Mon, 08 Apr 2013 03:47:41 UTC +00:00], ["height", 200], ["updated_at", Mon, 08 Apr 2013 03:47:41 UTC +00:00], ["width", 200], ["x", 0], ["y", 0]]
+  [1m[35m (150.0ms)[0m  commit transaction
+  Rendered notes/create.js.erb (0.0ms)
+Completed 200 OK in 163ms (Views: 6.0ms | ActiveRecord: 153.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:47:41 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:47:44 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/_note.html.erb (2.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 63ms (Views: 60.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 23:47:44 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 23:47:44 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 23:47:44 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 23:47:44 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 23:47:44 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 23:47:45 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 23:47:45 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 23:47:45 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 23:47:45 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 23:47:45 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 23:47:45 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 23:47:45 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 23:47:45 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started DELETE "/notes/48" for 127.0.0.1 at 2013-04-07 23:47:58 -0400
+Processing by NotesController#destroy as JS
+  Parameters: {"id"=>"48"}
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "48"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "notes" WHERE "notes"."id" = ?[0m  [["id", 48]]
+  [1m[35m (96.0ms)[0m  commit transaction
+  Rendered notes/destroy.js.erb (0.0ms)
+Completed 200 OK in 111ms (Views: 6.0ms | ActiveRecord: 98.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:48:00 -0400
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 52ms (Views: 49.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 23:48:01 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 23:48:01 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 23:48:01 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 23:48:01 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 23:48:01 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 23:48:01 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 23:48:01 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 23:48:01 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 23:48:01 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 23:48:01 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 23:48:01 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 23:48:01 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 23:48:01 -0400
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started DELETE "/notes/47" for 127.0.0.1 at 2013-04-07 23:48:08 -0400
+Processing by NotesController#destroy as JS
+  Parameters: {"id"=>"47"}
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", "47"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "notes" WHERE "notes"."id" = ?  [["id", 47]]
+  [1m[36m (86.0ms)[0m  [1mcommit transaction[0m
+  Rendered notes/destroy.js.erb (1.0ms)
+Completed 200 OK in 98ms (Views: 5.0ms | ActiveRecord: 89.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:48:13 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 23:48:14 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 23:48:14 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 23:48:14 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 23:48:14 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 23:48:14 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 23:48:14 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 23:48:14 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 23:48:14 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 23:48:14 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 23:48:14 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 23:48:14 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 23:48:14 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 23:48:15 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:53:59 -0400
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/_note.html.erb (3.0ms)
+  Rendered notes/_note.html.erb (2.0ms)
+  Rendered notes/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 67ms (Views: 64.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 23:54:02 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 23:54:02 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 23:54:02 -0400
+Served asset /notes.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 23:54:02 -0400
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 23:54:02 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 23:54:02 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 23:54:02 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 23:54:02 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 23:54:02 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 23:54:02 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 23:54:02 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 23:54:02 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 23:54:02 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started DELETE "/notes/46" for 127.0.0.1 at 2013-04-07 23:54:13 -0400
+Processing by NotesController#destroy as JS
+  Parameters: {"id"=>"46"}
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", "46"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  DELETE FROM "notes" WHERE "notes"."id" = ?  [["id", 46]]
+  [1m[36m (99.0ms)[0m  [1mcommit transaction[0m
+  Rendered notes/destroy.js.erb (0.0ms)
+Completed 200 OK in 114ms (Views: 7.0ms | ActiveRecord: 102.0ms)
+
+
+Started DELETE "/notes/1" for 127.0.0.1 at 2013-04-07 23:54:14 -0400
+Processing by NotesController#destroy as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "notes" WHERE "notes"."id" = ?  [["id", 1]]
+  [1m[36m (128.0ms)[0m  [1mcommit transaction[0m
+  Rendered notes/destroy.js.erb (0.0ms)
+Completed 200 OK in 141ms (Views: 6.0ms | ActiveRecord: 131.0ms)
+
+
+Started POST "/notes" for 127.0.0.1 at 2013-04-07 23:54:17 -0400
+Processing by NotesController#create as JS
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "notes" ("body", "created_at", "height", "updated_at", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", ""], ["created_at", Mon, 08 Apr 2013 03:54:17 UTC +00:00], ["height", 200], ["updated_at", Mon, 08 Apr 2013 03:54:17 UTC +00:00], ["width", 200], ["x", 0], ["y", 0]]
+  [1m[35m (183.0ms)[0m  commit transaction
+  Rendered notes/create.js.erb (0.0ms)
+Completed 200 OK in 195ms (Views: 5.0ms | ActiveRecord: 186.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:54:17 -0400
+Processing by NotesController#index as */*
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:54:19 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/_note.html.erb (0.0ms)
+  Rendered notes/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 23:54:19 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 23:54:19 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 23:54:19 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 23:54:19 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 23:54:20 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 23:54:20 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 23:54:20 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 23:54:20 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 23:54:20 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 23:54:20 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 23:54:20 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 23:54:20 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 23:54:20 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-07 23:55:53 -0400
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-07 23:55:53 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 23:55:53 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-07 23:55:53 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 23:55:53 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 23:55:53 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 23:55:53 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 23:55:53 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 23:55:53 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-07 23:55:54 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 23:55:54 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-07 23:55:54 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 23:55:54 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 23:55:54 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-08 00:00:48 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/_note.html.erb (3.0ms)
+  Rendered notes/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:00:49 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:00:49 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:00:49 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:00:49 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:00:49 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:00:49 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:00:49 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:00:49 -0400
+Served asset /boards.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:00:49 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:00:49 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:00:49 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:00:49 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:00:50 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started PUT "/notes/49" for 127.0.0.1 at 2013-04-08 00:00:55 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"18", "id"=>"49"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "49"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 111ms (ActiveRecord: 1.0ms)
+
+
+Started PUT "/notes/49" for 127.0.0.1 at 2013-04-08 00:00:55 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"18", "id"=>"49"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", "49"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 204 No Content in 5ms (ActiveRecord: 1.0ms)
+
+
+Started PUT "/notes/49" for 127.0.0.1 at 2013-04-08 00:00:59 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"18", "id"=>"49"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "49"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 6ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-08 00:01:38 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/_note.html.erb (86.0ms)
+  Rendered notes/index.html.erb within layouts/application (93.0ms)
+Completed 200 OK in 129ms (Views: 127.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:01:39 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:01:39 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:01:39 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:01:39 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:01:39 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:01:39 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:01:39 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:01:40 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:01:40 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:01:40 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:01:40 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:01:40 -0400
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:01:40 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/notes/49" for 127.0.0.1 at 2013-04-08 00:01:44 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"18", "body"=>"sadfasdf", "id"=>"49"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "49"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-08 00:02:01 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (74.0ms)
+Completed 200 OK in 116ms (Views: 113.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:02:01 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:02:02 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:02:02 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:02:02 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:02:02 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:02:02 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:02:02 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:02:02 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:02:02 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:02:02 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:02:02 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:02:02 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:02:02 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-08 00:03:28 -0400
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 70ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:03:28 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:03:28 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:03:28 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:03:28 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:03:28 -0400
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:03:29 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:03:29 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:03:29 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:03:29 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:03:29 -0400
+Served asset /notes.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:03:29 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:03:29 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:03:29 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started PUT "/notes/49" for 127.0.0.1 at 2013-04-08 00:03:36 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"18", "body"=>"asdfsdf", "id"=>"49"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", "49"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 204 No Content in 5ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/notes" for 127.0.0.1 at 2013-04-08 00:04:57 -0400
+Processing by NotesController#create as JS
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "notes" ("body", "created_at", "height", "updated_at", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?)  [["body", ""], ["created_at", Mon, 08 Apr 2013 04:04:57 UTC +00:00], ["height", 200], ["updated_at", Mon, 08 Apr 2013 04:04:57 UTC +00:00], ["width", 200], ["x", 0], ["y", 0]]
+  [1m[36m (132.0ms)[0m  [1mcommit transaction[0m
+  Rendered notes/create.js.erb (1.0ms)
+Completed 200 OK in 148ms (Views: 8.0ms | ActiveRecord: 135.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-08 00:04:58 -0400
+Processing by NotesController#index as */*
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 84ms (Views: 82.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-08 00:05:01 -0400
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:05:01 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:05:01 -0400
+Served asset /boards.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:05:02 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:05:02 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:05:02 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:05:02 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:05:02 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:05:02 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:05:02 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:05:02 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:05:02 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:05:02 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:05:02 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/notes/49/edit" for 127.0.0.1 at 2013-04-08 00:07:47 -0400
+Processing by NotesController#edit as HTML
+  Parameters: {"id"=>"49"}
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", "49"]]
+  Rendered notes/_form.html.erb (18.0ms)
+  Rendered notes/edit.html.erb within layouts/application (23.0ms)
+Completed 500 Internal Server Error in 35ms
+
+ActionView::Template::Error (undefined method `title' for #<Note:0x31f3830>):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :title %><br />
+    16:     <%= f.text_field :title %>
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :body %><br />
+  app/views/notes/_form.html.erb:16:in `block in _app_views_notes__form_html_erb___823064565_31256676'
+  app/views/notes/_form.html.erb:1:in `_app_views_notes__form_html_erb___823064565_31256676'
+  app/views/notes/edit.html.erb:3:in `_app_views_notes_edit_html_erb___3880030_31301424'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (47.0ms)
+
+
+Started GET "/notes/49/edit" for 127.0.0.1 at 2013-04-08 00:08:19 -0400
+Processing by NotesController#edit as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "49"]]
+  Rendered notes/_form.html.erb (10.0ms)
+  Rendered notes/edit.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 52ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:08:19 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:08:19 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:08:19 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:08:19 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:08:19 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:08:20 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:08:20 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:08:20 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:08:20 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:08:20 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:08:20 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:08:20 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:08:21 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-08 00:08:30 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 46ms (Views: 43.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:08:31 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:08:31 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:08:31 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:08:31 -0400
+Served asset /notes.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:08:31 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:08:31 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:08:31 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:08:31 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:08:31 -0400
+Served asset /boards.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:08:31 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:08:31 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:08:32 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:08:32 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:08:36 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"18", "body"=>"sfasdf sdf", "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "50"]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 5ms (ActiveRecord: 2.0ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:08:37 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"18", "body"=>"sfasdf sdf", "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", "50"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 204 No Content in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-08 00:08:49 -0400
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (0.0ms)
+  Rendered notes/index.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 65ms (Views: 63.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:08:49 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:08:49 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:08:49 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:08:49 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:08:49 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:08:49 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:08:49 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:08:49 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:08:50 -0400
+Served asset /boards.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:08:50 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:08:50 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:08:50 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:08:50 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-08 00:10:30 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/_note.html.erb (2.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 123ms (Views: 93.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:10:31 -0400
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:10:31 -0400
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:10:31 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:10:31 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:10:31 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:10:31 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:10:31 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:10:31 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:10:31 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:10:31 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:10:31 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:10:31 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:10:31 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:11:06 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"18", "body"=>"dfasdfsdf asdf&nbsp;", "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "50"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 9ms (ActiveRecord: 1.0ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:11:06 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"18", "body"=>"dfasdfsdf asdf&nbsp;", "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", "50"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 204 No Content in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-08 00:11:11 -0400
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 50ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:11:12 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:11:12 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:11:12 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:11:12 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:11:12 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:11:12 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:11:12 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:11:12 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:11:12 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:11:12 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:11:12 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:11:12 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:11:13 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-08 00:13:38 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/_note.html.erb (2.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 130ms (Views: 84.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:13:38 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:13:38 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:13:38 -0400
+Served asset /boards.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:13:38 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:13:38 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:13:39 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:13:39 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:13:39 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:13:39 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:13:39 -0400
+Served asset /notes.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:13:39 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:13:39 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:13:39 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:13:42 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"18", "body"=>"afsdf", "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "50"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 9ms (ActiveRecord: 1.0ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:13:42 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"18", "body"=>"afsdf", "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", "50"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 204 No Content in 6ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-08 00:13:44 -0400
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 52ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:13:44 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:13:44 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:13:44 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:13:44 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:13:44 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:13:44 -0400
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:13:45 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:13:45 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:13:45 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:13:45 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:13:45 -0400
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:13:45 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:13:45 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:13:51 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"18", "body"=>"asfsdf", "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", "50"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 204 No Content in 5ms (ActiveRecord: 0.0ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:13:51 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"18", "body"=>"asfsdf", "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "50"]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-08 00:16:18 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/_note.html.erb (3.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:16:18 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:16:18 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:16:19 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:16:19 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:16:19 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:16:19 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:16:19 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:16:19 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:16:19 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:16:19 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:16:19 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:16:19 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:16:19 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:16:22 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"note"=>"[object Object]", "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "50"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `stringify_keys' for "[object Object]":String):
+  app/controllers/notes_controller.rb:69:in `block in update'
+  app/controllers/notes_controller.rb:68:in `update'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (44.0ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:16:22 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"note"=>"[object Object]", "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", "50"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `stringify_keys' for "[object Object]":String):
+  app/controllers/notes_controller.rb:69:in `block in update'
+  app/controllers/notes_controller.rb:68:in `update'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (13.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (87.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-08 00:18:49 -0400
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/_note.html.erb (3.0ms)
+  Rendered notes/_note.html.erb (2.0ms)
+  Rendered notes/index.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 102ms (Views: 74.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:18:50 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:18:50 -0400
+Served asset /notes.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:18:50 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:18:50 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:18:50 -0400
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:18:50 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:18:50 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:18:50 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:18:50 -0400
+Served asset /boards.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:18:50 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:18:51 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:18:51 -0400
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:18:51 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:18:54 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"note"=>"[object Object]", "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", "50"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `stringify_keys' for "[object Object]":String):
+  app/controllers/notes_controller.rb:69:in `block in update'
+  app/controllers/notes_controller.rb:68:in `update'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.0ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:18:54 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"note"=>"[object Object]", "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "50"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 7ms
+
+NoMethodError (undefined method `stringify_keys' for "[object Object]":String):
+  app/controllers/notes_controller.rb:69:in `block in update'
+  app/controllers/notes_controller.rb:68:in `update'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (17.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (80.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-08 00:19:59 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/_note.html.erb (10.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 73ms (Views: 70.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:20:00 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:20:00 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:20:00 -0400
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:20:00 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:20:00 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:20:00 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:20:00 -0400
+Served asset /notes.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:20:00 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:20:00 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:20:00 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:20:00 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:20:01 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:20:01 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:20:04 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"{\"_method\":\"PUT\",\"note\":{\"x\":15,\"y\":15,\"width\":150,\"height\":18,\"body\":\"asdfd\"}}"=>nil, "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "50"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 7ms (ActiveRecord: 0.0ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:20:04 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"{\"_method\":\"PUT\",\"note\":{\"x\":15,\"y\":15,\"width\":150,\"height\":18,\"body\":\"asdfd\"}}"=>nil, "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", "50"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 204 No Content in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-08 00:20:15 -0400
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 50ms (Views: 47.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:20:16 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:20:16 -0400
+Served asset /notes.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:20:16 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:20:16 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:20:16 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:20:16 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:20:16 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:20:16 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:20:16 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:20:16 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:20:16 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:20:16 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:20:16 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/notes/49/edit" for 127.0.0.1 at 2013-04-08 00:20:27 -0400
+Processing by NotesController#edit as HTML
+  Parameters: {"id"=>"49"}
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", "49"]]
+  Rendered notes/_form.html.erb (9.0ms)
+  Rendered notes/edit.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 53ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:20:28 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:20:28 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:20:28 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:20:28 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:20:28 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:20:28 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:20:28 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:20:28 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:20:29 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:20:29 -0400
+Served asset /notes.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:20:29 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:20:29 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:20:29 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/notes/49" for 127.0.0.1 at 2013-04-08 00:20:39 -0400
+Processing by NotesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6pfpT/ea3SsHpaWAR6vEXKCRyiH9w0zJNhWqNjQ2/4w=", "note"=>{"body"=>"test", "x"=>"100", "y"=>"100", "width"=>"200", "height"=>"200"}, "commit"=>"Update Note", "id"=>"49"}
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "49"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (2.0ms)[0m  [1mUPDATE "notes" SET "body" = 'test', "x" = 100, "y" = 100, "updated_at" = '2013-04-08 04:20:39.974563' WHERE "notes"."id" = 49[0m
+  [1m[35m (123.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/notes/49
+Completed 302 Found in 158ms (ActiveRecord: 125.0ms)
+
+
+Started GET "/notes/49" for 127.0.0.1 at 2013-04-08 00:20:40 -0400
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "49"]]
+  Rendered notes/show.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 25ms
+
+ActionView::Template::Error (undefined method `title' for #<Note:0x3ce70d8>):
+    2: 
+    3: <p>
+    4:   <b>Title:</b>
+    5:   <%= @note.title %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/notes/show.html.erb:5:in `_app_views_notes_show_html_erb___863627924_31260744'
+  app/controllers/notes_controller.rb:18:in `show'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (47.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (111.0ms)
+
+
+Started GET "/notes/49" for 127.0.0.1 at 2013-04-08 00:21:07 -0400
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"49"}
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", "49"]]
+  Rendered notes/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:21:07 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:21:07 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:21:07 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:21:07 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:21:07 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:21:07 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:21:08 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:21:08 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:21:08 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:21:08 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:21:08 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:21:08 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:21:08 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-08 00:21:14 -0400
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 50ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-08 00:21:14 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (5.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (81.0ms)
+Completed 200 OK in 159ms (Views: 153.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:21:15 -0400
+Served asset /boards.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:21:15 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:21:15 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:21:15 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:21:15 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:21:15 -0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:21:15 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:21:15 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:21:15 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:21:15 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:21:16 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:21:16 -0400
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:21:16 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:21:32 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"{\"_method\":\"PUT\",\"note\":{\"x\":15,\"y\":15,\"width\":150,\"height\":18,\"body\":\"sdf\"}}"=>nil, "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "50"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 5ms (ActiveRecord: 1.0ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:21:32 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"{\"_method\":\"PUT\",\"note\":{\"x\":15,\"y\":15,\"width\":150,\"height\":18,\"body\":\"sdf\"}}"=>nil, "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", "50"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 204 No Content in 4ms (ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-08 00:27:52 -0400
+Processing by NotesController#index as HTML
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" [0m
+  Rendered notes/_note.html.erb (5.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 145ms (Views: 113.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:27:53 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:27:53 -0400
+Served asset /boards.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:27:53 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:27:53 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:27:53 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:27:53 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:27:53 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:27:53 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:27:53 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:27:53 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:27:53 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:27:53 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:27:53 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:27:57 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"18", "body"=>"asdfsd", "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", "50"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 7ms
+
+NoMethodError (undefined method `to_i' for [:width]:Array):
+  app/controllers/notes_controller.rb:71:in `block in update'
+  app/controllers/notes_controller.rb:69:in `update'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (47.0ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:27:57 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"18", "body"=>"asdfsd", "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "50"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `to_i' for [:width]:Array):
+  app/controllers/notes_controller.rb:71:in `block in update'
+  app/controllers/notes_controller.rb:69:in `update'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (62.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-08 00:28:36 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 84ms (Views: 51.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:28:36 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:28:37 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:28:37 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:28:37 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:28:37 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:28:37 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:28:37 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:28:37 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:28:37 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:28:37 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:28:37 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:28:37 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:28:37 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:28:39 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"18", "body"=>"asd", "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "50"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (3.0ms)[0m  [1mUPDATE "notes" SET "x" = 15, "y" = 15, "body" = 'asd', "width" = 150, "height" = 18, "updated_at" = '2013-04-08 04:28:39.876012' WHERE "notes"."id" = 50[0m
+  [1m[35m (106.0ms)[0m  commit transaction
+Completed 204 No Content in 120ms (ActiveRecord: 110.0ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:28:39 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"18", "body"=>"asd", "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "50"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 49ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-08 00:28:42 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 49ms (Views: 46.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:28:42 -0400
+Served asset /boards.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:28:42 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:28:42 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:28:42 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:28:42 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:28:42 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:28:43 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:28:43 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:28:43 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:28:43 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:28:43 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:28:43 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:28:43 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started PUT "/notes/49" for 127.0.0.1 at 2013-04-08 00:37:07 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"36", "body"=>"test<div>d</div>", "id"=>"49"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "49"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (2.0ms)[0m  [1mUPDATE "notes" SET "x" = 15, "y" = 15, "body" = 'test<div>d</div>', "width" = 150, "height" = 36, "updated_at" = '2013-04-08 04:37:07.259033' WHERE "notes"."id" = 49[0m
+  [1m[35m (144.0ms)[0m  commit transaction
+Completed 204 No Content in 155ms (ActiveRecord: 147.0ms)
+
+
+Started PUT "/notes/49" for 127.0.0.1 at 2013-04-08 00:37:07 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"36", "body"=>"test<div>d</div>", "id"=>"49"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "49"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-08 00:37:08 -0400
+Processing by NotesController#index as HTML
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" 
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 56ms (Views: 54.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 00:37:08 -0400
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/boards.css?body=1" for 127.0.0.1 at 2013-04-08 00:37:08 -0400
+Served asset /boards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-08 00:37:08 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 00:37:08 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 00:37:08 -0400
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 00:37:08 -0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 00:37:09 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 00:37:09 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-08 00:37:09 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boards.js?body=1" for 127.0.0.1 at 2013-04-08 00:37:09 -0400
+Served asset /boards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 00:37:09 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 00:37:09 -0400
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 00:37:09 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:37:24 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"18", "body"=>"asd", "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "50"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 21ms (ActiveRecord: 1.0ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:37:24 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"18", "body"=>"asd", "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", "50"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 204 No Content in 6ms (ActiveRecord: 0.0ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:37:24 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"18", "body"=>"asd", "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "50"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 5ms (ActiveRecord: 2.0ms)
+
+
+Started PUT "/notes/50" for 127.0.0.1 at 2013-04-08 00:37:24 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"15", "y"=>"15", "width"=>"150", "height"=>"18", "body"=>"asd", "id"=>"50"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", "50"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  commit transaction
+Completed 204 No Content in 14ms (ActiveRecord: 2.0ms)

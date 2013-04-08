@@ -1,12 +1,6 @@
-<script type="text/javascript"
-    src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-<script type="text/javascript"
-    src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script>
-<link rel="stylesheet" type="text/css"
-    href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css"/>
 <script>
 
-/*$(function(){
+$(function(){
     $('.stickyNote')
         .draggable({
             stop: function(e, ui) {
@@ -51,7 +45,7 @@
                     url: '/notes/' + id,
                     type: 'PUT',
                     data: { _method:'PUT', x: $(this).position().left, y: $(this).position().top,
-                    width: $(this).width(), height: $(this).height() },
+                    	width: $(this).width(), height: $(this).height(), body: content },
                     dataType: 'json',
                     success: function(data) {
                         alert('put sent');
@@ -59,43 +53,10 @@
                 });
             }
         });
-});*/
+});
 </script>
 
-<h1>Listing notes</h1>
-<table>
-  <tr>
-    <th>Body</th>
-    <th>X</th>
-    <th>Y</th>
-    <th>Width</th>
-    <th>Height</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @notes.each do |note| %>
-  <tr>
-    <td><%= note.body %></td>
-    <td><%= note.x %></td>
-    <td><%= note.y %></td>
-    <td><%= note.width %></td>
-    <td><%= note.height %></td>
-    <td><%= link_to 'Show', note %></td>
-    <td><%= link_to 'Edit', edit_note_path(note) %></td>
-    <td><%= link_to 'Destroy', note, method: :delete, :class => "delete_note", :remote => true, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-
-<% end %>
-</table>
-
-<br />
-<%= link_to 'New Note', notes_url, :method => :post, :remote => true %>
-
-<div id = "notes" style="position:relative;">
-    <% @notes.each do |note| %>
-        <%= render note %>
-    <% end %>
+<div class="stickyNote" data-noteId="<%= note.id %>" style="position:absolute; top:<%=note.y%>px; left:<%=note.x%>px; width:<%=note.width%>, height:<%=note.height%>px">
+    <span class="delete_note" style="float:right;"> <%= link_to 'X', note, method: :delete, :remote => true, data: { confirm: 'Are you sure?' } %> </span>
+    <div class='textarea' contenteditable="true"><%=note.body%></div>
 </div>
-
