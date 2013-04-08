@@ -4,37 +4,6 @@
     src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script>
 <link rel="stylesheet" type="text/css"
     href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css"/>
-    <h1>Listing notes</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th>X</th>
-    <th>Y</th>
-    <th>Width</th>
-    <th>Board</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @notes.each do |note| %>
-  <tr>
-    <td><%= note.title %></td>
-    <td><%= note.body %></td>
-    <td><%= note.x %></td>
-    <td><%= note.y %></td>
-    <td><%= note.width %></td>
-    <td><%= note.board %></td>
-    <td><%= link_to 'Show', note %></td>
-    <td><%= link_to 'Edit', edit_note_path(note) %></td>
-    <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
 <script>
 
 $(function(){
@@ -81,9 +50,44 @@ $(function(){
 });
 </script>
 
-<div id = "notes" style="position:relative;">
-    <div class="stickyNote" style="position:absolute; top:0px; left:0px;">
-        <div class='textarea' contenteditable="true">note 2</div>
-    </div>
-</div>
+<h1>Listing notes</h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th>X</th>
+    <th>Y</th>
+    <th>Width</th>
+    <th>Board</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @notes.each do |note| %>
+  <tr>
+    <td><%= note.title %></td>
+    <td><%= note.body %></td>
+    <td><%= note.x %></td>
+    <td><%= note.y %></td>
+    <td><%= note.width %></td>
+    <td><%= note.board %></td>
+    <td><%= link_to 'Show', note %></td>
+    <td><%= link_to 'Edit', edit_note_path(note) %></td>
+    <td><%= link_to 'Destroy', note, method: :delete, :class => "delete_note", :remote => true, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+
+<% end %>
+</table>
+
+<br />
 <%= link_to 'New Note', notes_url, :method => :post, :remote => true %>
+
+<div id = "notes" style="position:relative;">
+    <% @notes.each do |note| %>
+        <div class="stickyNote" data-noteId="<%= note.id %>" style="position:absolute; top:<%=note.y%>px; left:<%=note.x%>px;">
+            <div class='textarea' contenteditable="true"><%=note.body%></div>
+        </div>
+    <% end %>
+</div>
+

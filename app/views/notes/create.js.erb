@@ -2,13 +2,11 @@
 //	add_note();
 //	console.log('added');
 //});
-    console.log("testing");
 $.ajax({
 success: function(html) {
-
+console.log("note id", "<%= @note.id %>");
 var add_note = function () {
-    $('#notes').append('<div class=\'stickyNote\' style=\'position:absolute; left:0px; top:0px\'><div class=\'textarea\' contenteditable=\'true\'></div></div>');
-
+    $('#notes').append('<div class=\'stickyNote\' data-noteId=<%= @note.id %> style=\'position:absolute; left:0px; top:0px\'><div class=\'textarea\' contenteditable=\'true\'></div></div>');
     $('.stickyNote')
         .draggable({
             stop: function(e, ui) {
@@ -51,6 +49,5 @@ var add_note = function () {
 
 }
 add_note();
-console.log("got here");
 }
 });
