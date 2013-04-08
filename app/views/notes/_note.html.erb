@@ -16,7 +16,16 @@ $(function(){
                 console.log("absolutePosition left", ui.absolutePosition.left);
                 something = ui.absolutePosition.top;
                 console.log("something", something);
-                // TODO: send updated location
+                $.ajax({
+                    url: '/notes/' + $(this).attr('data-noteId'),
+                    type: 'PUT',
+                    data: { _method:'PUT', x: $(this).position().left, y: $(this).position().top,
+                        width: $(this).width(), height: $(this).height(), body: $(this).find('.textarea').html() },
+                    dataType: 'json',
+                    success: function(data) {
+                        alert('put sent');
+                  }
+                });
             }
         })
         .resizable({
@@ -28,7 +37,16 @@ $(function(){
             },
             stop: function(e, ui) {
                 alert('resizing stopped');
-                // TODO: send updated note dimensions
+                $.ajax({
+                    url: '/notes/' + $(this).attr('data-noteId'),
+                    type: 'PUT',
+                    data: { _method:'PUT', x: $(this).position().left, y: $(this).position().top,
+                        width: $(this).width(), height: $(this).height(), body: $(this).find('.textarea').html() },
+                    dataType: 'json',
+                    success: function(data) {
+                        alert('put sent');
+                  }
+                });
             }
         });
 
@@ -56,7 +74,7 @@ $(function(){
 });
 </script>
 
-<div class="stickyNote" data-noteId="<%= note.id %>" style="position:absolute; top:<%=note.y%>px; left:<%=note.x%>px; width:<%=note.width%>, height:<%=note.height%>px">
+<div class="stickyNote" data-noteId="<%= note.id %>" style="position:absolute; top:<%=note.y%>px; left:<%=note.x%>px; width:<%=note.width%>px; height:<%=note.height%>px">
     <span class="delete_note" style="float:right;"> <%= link_to 'X', note, method: :delete, :remote => true, data: { confirm: 'Are you sure?' } %> </span>
-    <div class='textarea' contenteditable="true"><%=note.body%></div>
+    <div class='textarea' contenteditable="true"><%= raw note.body%></div>
 </div>

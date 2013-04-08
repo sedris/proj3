@@ -4,9 +4,9 @@ class User < ActiveRecord::Base
 	validates_presence_of :password, :on => :create
 	validates_uniqueness_of :username, :on => :create
 
-	has_many :boards, :dependent => :destroy
+	has_many :notes, :dependent => :destroy
 
-	# Requires: "name" is valid string
+	/# Requires: "name" is valid string
 	# Modifies: Boards associated with user
 	# Effects: 	Creates new board for user
 	# 			Board is named "Board [board_id]" if no name given
@@ -28,5 +28,5 @@ class User < ActiveRecord::Base
 			board.notes.destroy_all()
 			self.boards.destroy(board_id)
 		end
-	end
+	end/
 end

@@ -77,7 +77,7 @@
 
 <% @notes.each do |note| %>
   <tr>
-    <td><%= note.body %></td>
+    <td><%= raw note.body %></td>
     <td><%= note.x %></td>
     <td><%= note.y %></td>
     <td><%= note.width %></td>
