@@ -4,18 +4,12 @@ $(function(){
     $('.stickyNote')
         .draggable({
             stop: function(e, ui) {
-                alert('dragging stopped');
+                /*alert('dragging stopped');
                 console.log("e", e);
                 console.log("ui", ui);
                 left = ui.absolutePosition.left;
                 this.top = ui.absolutePosition.top;
-                console.log("left", left);
-                console.log("top", this.top);
-                console.log("absolutePosition", ui.absolutePosition);
-                console.log("absolutePosition top", ui.absolutePosition.top);
-                console.log("absolutePosition left", ui.absolutePosition.left);
-                something = ui.absolutePosition.top;
-                console.log("something", something);
+                something = ui.absolutePosition.top;*/
                 $.ajax({
                     url: '/notes/' + $(this).attr('data-noteId'),
                     type: 'PUT',
@@ -29,12 +23,10 @@ $(function(){
             }
         })
         .resizable({
-            start: function(e, ui) {
-                //alert('resizing started');
+            /*start: function(e, ui) {
             },
             resize: function(e, ui) {
-         
-            },
+            },*/
             stop: function(e, ui) {
                 alert('resizing stopped');
                 $.ajax({
@@ -54,16 +46,15 @@ $(function(){
         var contents = $('.textarea').html();
         $('.textarea').blur(function() {
             if (contents!=$(this).html()){
-                console.log("updated content", $(this).html());
+                //console.log("updated content", $(this).html());
                 content = $(this).html();
-                console.log('object', this);
+                //console.log('object', this);
                 var id = $(this).parent().attr('data-noteId');
-
                 $.ajax({
                     url: '/notes/' + id,
                     type: 'PUT',
                     data: { _method:'PUT', x: $(this).position().left, y: $(this).position().top,
-                    	width: $(this).width(), height: $(this).height(), body: content },
+                        width: $(this).width(), height: $(this).height(), body: content },
                     dataType: 'json',
                     success: function(data) {
                         alert('put sent');

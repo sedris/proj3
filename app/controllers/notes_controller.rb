@@ -23,24 +23,19 @@ class NotesController < ApplicationController
 
   # GET /notes/new
   # GET /notes/new.json
-  def new
+  /def new
     @note = Note.new
 
-    /respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @note }
-    end/
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @note }
-      format.js { render :layout => false }
-      end
-  end
+    end
+  end/
 
   # GET /notes/1/edit
-  def edit
+  /def edit
     @note = Note.find(params[:id])
-  end
+  end/
 
   # POST /notes
   # POST /notes.json
@@ -69,6 +64,7 @@ class NotesController < ApplicationController
     respond_to do |format|
       #if @note.update_attributes(params[:note])
       if @note.update_attributes(:x => params[:x], :y => params[:y], :body=>params[:body], :width=>params[:width], :height=>params[:height])
+      #if @note.update_note(params[:body], params[:width], params[:height], params[:x], params[:y])
         format.html { redirect_to @note, notice: 'Note was successfully updated.' }
         format.json { head :no_content }
       else

@@ -27,11 +27,16 @@ class Note < ActiveRecord::Base
   end
 
 
-  /# Requires: valid strings and ints
+  # Requires: valid strings and ints
   # Modifies: Attributes
   # Effects:  Updates attributes
-  def update(title = self.title, body, width, x, y)
-    self.update_attributes(:title => title, :body => body, :width => width, :x => x, :y =>y)
-  end/
+  def update_note(body, width, height, x, y)
+    body = body? ? body : self.body
+    width = width? ? width : self.width
+    height = height? ? height : self.height
+    x = x? ? x : self.x
+    y = y? ? y : self.x
+    return self.update_attributes(:body => body, :width => width, :height => height, :x => x, :y =>y)
+  end
 
 end
