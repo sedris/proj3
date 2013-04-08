@@ -1,5 +1,9 @@
 <script>
-
+$.ajaxSetup({
+  beforeSend: function(xhr) {
+    xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+  }
+}); 
 $(function(){
     $('.stickyNote')
         .draggable({
@@ -48,13 +52,14 @@ $(function(){
             if (contents!=$(this).html()){
                 //console.log("updated content", $(this).html());
                 content = $(this).html();
-                //console.log('object', this);
+                console.log('object', $(this).parent().position());
                 var id = $(this).parent().attr('data-noteId');
+                var position = $(this).parent().position();
                 $.ajax({
                     url: '/notes/' + id,
                     type: 'PUT',
-                    data: { _method:'PUT', x: $(this).position().left, y: $(this).position().top,
-                        width: $(this).width(), height: $(this).height(), body: content },
+                    data: { _method:'PUT', x: position.left, y: position.top,
+                        width: $(this).parent().width(), height: $(this).parent().height(), body: content },
                     dataType: 'json',
                     success: function(data) {
                         alert('put sent');
