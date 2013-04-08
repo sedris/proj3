@@ -5,18 +5,27 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by_username(params[:username])
+    /user = User.find_by_username(params[:username])
     if user && user.authenticate(params[:password])
         session[:user_id] = user.id
-        #redirect_to root_url, :notice => "logged in"
+        redirect_to root_url, :notice => "logged in"
     else
         flash.now.alert = "invalid email or password"
-        #render "new"
-    end
-    json_response = { :user => user}
-    respond_to do |format|
-      format.json { render :json => json_response }
-      format.all { render :text => "Only JSON supported at the moment"}
+        render "new"
+    end/
+      
+      user = User.find_by_username(params[:username])
+      respond_to do |format|
+      if user && user.authenticate(params[:password])
+        session[:user_id] = user.id
+        format.html { redirect_to root_url, notice: 'logged in' }
+        format.json { head :no_content }
+        format.js { render :layout => false }
+      else
+        format.html { render :text => "error" }
+        format.json { render json: {:error => "invalid email or password"}, status: :unprocessable_entity }
+        format.js { render :layout => false }
+      end
     end
     #render :partial => 'preview', :content_type => 'text/html'
   end

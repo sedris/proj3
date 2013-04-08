@@ -1,10 +1,12 @@
 class Note < ActiveRecord::Base
   belongs_to :board
+  # TODO: add height? remove title?
   attr_accessible :body, :title, :width, :x, :y
 
-  validate :validate_attrs
+  #validate :validate_attrs
+  before_create :set_defaults
 
-	# Requires: width > 0, x >= 0, y >= 0
+	/# Requires: width > 0, x >= 0, y >= 0
 	# Modifies: None.
 	# Effects: 	Allows Note to save if valid, otherwise, does not save
   def validate_attrs
@@ -13,6 +15,17 @@ class Note < ActiveRecord::Base
     end
     
   	return true
+  end/
+
+  # Requires: None
+  # Modifies: Attributes
+  # Effects:  Sets attribute defaults if empty
+  def set_defaults
+    self.title = self.title? ? self.title : ""
+    self.body = self.body? ? self.body : ""
+    self.width = self.width? ? self.width : 200
+    self.x = self.x? ? self.x : 0
+    self.y = self.y? ? self.y : 0
   end
 
   # Requires: valid strings and ints
