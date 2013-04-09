@@ -23,12 +23,7 @@ $(function(){
             }
         })
         .resizable({
-            /*start: function(e, ui) {
-            },
-            resize: function(e, ui) {
-            },*/
             stop: function(e, ui) {
-                alert('resizing stopped');
                 $.ajax({
                     url: '/notes/' + $(this).attr('data-noteId'),
                     type: 'PUT',

@@ -1,7 +1,1 @@
-$('.delete_note').bind('ajax:success', function(){
-	$(this).closest('tr').fadeOut();
-});
-
-//console.log("id?", "<%=@note.id%>");
-//console.log("note:", $(".stickyNote[data-noteid='<%=@note.id%>']"));
 $(".stickyNote[data-noteid='<%=@note.id%>']").remove();

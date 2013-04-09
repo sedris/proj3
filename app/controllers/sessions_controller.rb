@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
         format.html { redirect_to notes_url }
         format.json { head :no_content }
       else
-        format.html { redirect_to notes_url}
+        format.html { redirect_to notes_url, :notice => "Invalid login"}
         format.json { render json: {:error => "invalid email or password"}, status: :unprocessable_entity }
       end
     end
