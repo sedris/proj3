@@ -4,6 +4,6 @@ one:
   username: one
   password_digest: one
 
-one:
-  username: one
-  password_digest: one
+two:
+  username: two
+  password_digest: two

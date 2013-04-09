@@ -883,3 +883,20 @@ Connecting to database specified by database.yml
   [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
   [1m[35m (3.0ms)[0m  rollback transaction
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 01:23:55', '2013-04-09 01:23:55', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 01:23:55', '2013-04-09 01:23:55', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "id") VALUES ('one', 'one', '2013-04-09 01:23:56', '2013-04-09 01:23:56', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "id") VALUES ('two', 'two', '2013-04-09 01:23:56', '2013-04-09 01:23:56', 298486374)[0m
+  [1m[35m (129.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (44.0ms)[0m  [1mINSERT INTO "notes" ("body", "created_at", "height", "updated_at", "user_id", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", ""], ["created_at", Tue, 09 Apr 2013 01:23:56 UTC +00:00], ["height", 200], ["updated_at", Tue, 09 Apr 2013 01:23:56 UTC +00:00], ["user_id", nil], ["width", 200], ["x", 0], ["y", 0]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
