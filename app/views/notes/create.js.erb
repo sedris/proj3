@@ -6,16 +6,13 @@ var add_note = function () {
     $('.stickyNote')
         .draggable({
             stop: function(e, ui) {
-                // TODO: send updated location
             }
         })
         .resizable({
             stop: function(e, ui) {
                 alert('resizing stopped');
-                // TODO: send updated note dimensions
             }
         });
-        // TODO: send updated note content
         var contents = $('.textarea').html();
         $('.textarea').blur(function() {
             if (contents!=$(this).html()){
