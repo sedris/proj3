@@ -900,3 +900,577 @@ Connecting to database specified by database.yml
   [1m[35m (0.0ms)[0m  begin transaction
   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (3.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 02:57:37', '2013-04-09 02:57:37', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 02:57:37', '2013-04-09 02:57:37', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "id") VALUES ('one', 'one', '2013-04-09 02:57:37', '2013-04-09 02:57:37', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "id") VALUES ('two', 'two', '2013-04-09 02:57:37', '2013-04-09 02:57:37', 298486374)[0m
+  [1m[35m (259.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (13.0ms)[0m  [1mINSERT INTO "notes" ("body", "created_at", "height", "updated_at", "user_id", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", ""], ["created_at", Tue, 09 Apr 2013 02:57:37 UTC +00:00], ["height", 200], ["updated_at", Tue, 09 Apr 2013 02:57:37 UTC +00:00], ["user_id", nil], ["width", 200], ["x", 0], ["y", 0]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (3.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 02:57:48', '2013-04-09 02:57:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 02:57:48', '2013-04-09 02:57:48', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "id") VALUES ('one', 'one', '2013-04-09 02:57:48', '2013-04-09 02:57:48', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "id") VALUES ('two', 'two', '2013-04-09 02:57:48', '2013-04-09 02:57:48', 298486374)[0m
+  [1m[35m (97.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by SessionsController#create as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 161ms (Views: 112.0ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:02:14', '2013-04-09 03:02:14', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:02:14', '2013-04-09 03:02:14', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:02:14', '2013-04-09 03:02:14')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:02:14', '2013-04-09 03:02:14')[0m
+  [1m[35m (152.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (7.0ms)[0m  [1mINSERT INTO "notes" ("body", "created_at", "height", "updated_at", "user_id", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", ""], ["created_at", Tue, 09 Apr 2013 03:02:14 UTC +00:00], ["height", 200], ["updated_at", Tue, 09 Apr 2013 03:02:14 UTC +00:00], ["user_id", nil], ["width", 200], ["x", 0], ["y", 0]]
+  [1m[35m (1.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:02:25', '2013-04-09 03:02:25', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:02:25', '2013-04-09 03:02:25', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:02:25', '2013-04-09 03:02:25')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:02:25', '2013-04-09 03:02:25')[0m
+  [1m[35m (258.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Processing by SessionsController#create as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 127ms (Views: 97.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:04:15', '2013-04-09 03:04:15', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:04:15', '2013-04-09 03:04:15', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:04:15', '2013-04-09 03:04:15')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:04:15', '2013-04-09 03:04:15')[0m
+  [1m[35m (108.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (7.0ms)[0m  [1mINSERT INTO "notes" ("body", "created_at", "height", "updated_at", "user_id", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", ""], ["created_at", Tue, 09 Apr 2013 03:04:15 UTC +00:00], ["height", 200], ["updated_at", Tue, 09 Apr 2013 03:04:15 UTC +00:00], ["user_id", nil], ["width", 200], ["x", 0], ["y", 0]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:04:26', '2013-04-09 03:04:26', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:04:26', '2013-04-09 03:04:26', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:04:26', '2013-04-09 03:04:26')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:04:26', '2013-04-09 03:04:26')[0m
+  [1m[35m (95.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Processing by SessionsController#create as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 104ms (Views: 85.0ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:05:22', '2013-04-09 03:05:22', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:05:22', '2013-04-09 03:05:22', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:05:22', '2013-04-09 03:05:22')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:05:22', '2013-04-09 03:05:22')[0m
+  [1m[35m (161.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (11.0ms)[0m  [1mINSERT INTO "notes" ("body", "created_at", "height", "updated_at", "user_id", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", ""], ["created_at", Tue, 09 Apr 2013 03:05:22 UTC +00:00], ["height", 200], ["updated_at", Tue, 09 Apr 2013 03:05:22 UTC +00:00], ["user_id", nil], ["width", 200], ["x", 0], ["y", 0]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (19.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (3.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:05:34', '2013-04-09 03:05:34', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:05:34', '2013-04-09 03:05:34', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:05:34', '2013-04-09 03:05:34')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:05:34', '2013-04-09 03:05:34')[0m
+  [1m[35m (176.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (3.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Processing by SessionsController#create as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 98ms (Views: 76.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:06:27', '2013-04-09 03:06:27', 980190962)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:06:27', '2013-04-09 03:06:27', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:06:27', '2013-04-09 03:06:27')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:06:27', '2013-04-09 03:06:27')[0m
+  [1m[35m (95.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (7.0ms)[0m  [1mINSERT INTO "notes" ("body", "created_at", "height", "updated_at", "user_id", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", ""], ["created_at", Tue, 09 Apr 2013 03:06:27 UTC +00:00], ["height", 200], ["updated_at", Tue, 09 Apr 2013 03:06:27 UTC +00:00], ["user_id", nil], ["width", 200], ["x", 0], ["y", 0]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:06:39', '2013-04-09 03:06:39', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:06:39', '2013-04-09 03:06:39', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:06:39', '2013-04-09 03:06:39')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:06:39', '2013-04-09 03:06:39')[0m
+  [1m[35m (96.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"password_digest"=>"[FILTERED]", "username"=>"one"}}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 135ms (Views: 103.0ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:08:13', '2013-04-09 03:08:13', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:08:13', '2013-04-09 03:08:13', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:08:13', '2013-04-09 03:08:13')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:08:13', '2013-04-09 03:08:13')[0m
+  [1m[35m (142.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (8.0ms)[0m  [1mINSERT INTO "notes" ("body", "created_at", "height", "updated_at", "user_id", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", ""], ["created_at", Tue, 09 Apr 2013 03:08:14 UTC +00:00], ["height", 200], ["updated_at", Tue, 09 Apr 2013 03:08:14 UTC +00:00], ["user_id", nil], ["width", 200], ["x", 0], ["y", 0]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:08:25', '2013-04-09 03:08:25', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:08:25', '2013-04-09 03:08:25', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:08:25', '2013-04-09 03:08:25')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:08:25', '2013-04-09 03:08:25')[0m
+  [1m[35m (96.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"password_digest"=>"[FILTERED]", "username"=>"one"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 109ms (Views: 91.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:08:54', '2013-04-09 03:08:54', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:08:54', '2013-04-09 03:08:54', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:08:54', '2013-04-09 03:08:54')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:08:54', '2013-04-09 03:08:54')[0m
+  [1m[35m (161.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (7.0ms)[0m  [1mINSERT INTO "notes" ("body", "created_at", "height", "updated_at", "user_id", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", ""], ["created_at", Tue, 09 Apr 2013 03:08:54 UTC +00:00], ["height", 200], ["updated_at", Tue, 09 Apr 2013 03:08:54 UTC +00:00], ["user_id", nil], ["width", 200], ["x", 0], ["y", 0]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (3.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:09:06', '2013-04-09 03:09:06', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:09:06', '2013-04-09 03:09:06', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:09:06', '2013-04-09 03:09:06')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:09:06', '2013-04-09 03:09:06')[0m
+  [1m[35m (159.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"password_digest"=>"[FILTERED]", "username"=>"one"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 128ms (Views: 94.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:12:09', '2013-04-09 03:12:09', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:12:09', '2013-04-09 03:12:09', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:12:09', '2013-04-09 03:12:09')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:12:09', '2013-04-09 03:12:09')[0m
+  [1m[35m (123.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (10.0ms)[0m  [1mINSERT INTO "notes" ("body", "created_at", "height", "updated_at", "user_id", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", ""], ["created_at", Tue, 09 Apr 2013 03:12:09 UTC +00:00], ["height", 200], ["updated_at", Tue, 09 Apr 2013 03:12:09 UTC +00:00], ["user_id", nil], ["width", 200], ["x", 0], ["y", 0]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (3.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:12:22', '2013-04-09 03:12:22', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:12:22', '2013-04-09 03:12:22', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:12:22', '2013-04-09 03:12:22')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:12:22', '2013-04-09 03:12:22')[0m
+  [1m[35m (167.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "username"=>"one"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 88ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:14:23', '2013-04-09 03:14:23', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:14:23', '2013-04-09 03:14:23', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:14:23', '2013-04-09 03:14:23')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:14:23', '2013-04-09 03:14:23')[0m
+  [1m[35m (141.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (6.0ms)[0m  [1mINSERT INTO "notes" ("body", "created_at", "height", "updated_at", "user_id", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", ""], ["created_at", Tue, 09 Apr 2013 03:14:24 UTC +00:00], ["height", 200], ["updated_at", Tue, 09 Apr 2013 03:14:24 UTC +00:00], ["user_id", nil], ["width", 200], ["x", 0], ["y", 0]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (3.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:14:34', '2013-04-09 03:14:34', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:14:34', '2013-04-09 03:14:34', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:14:34', '2013-04-09 03:14:34')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:14:34', '2013-04-09 03:14:34')[0m
+  [1m[35m (109.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "username"=>"one"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 82ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:15:13', '2013-04-09 03:15:13', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:15:13', '2013-04-09 03:15:13', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:15:13', '2013-04-09 03:15:13')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:15:13', '2013-04-09 03:15:13')[0m
+  [1m[35m (149.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (7.0ms)[0m  [1mINSERT INTO "notes" ("body", "created_at", "height", "updated_at", "user_id", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", ""], ["created_at", Tue, 09 Apr 2013 03:15:13 UTC +00:00], ["height", 200], ["updated_at", Tue, 09 Apr 2013 03:15:13 UTC +00:00], ["user_id", nil], ["width", 200], ["x", 0], ["y", 0]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:15:24', '2013-04-09 03:15:24', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:15:24', '2013-04-09 03:15:24', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:15:24', '2013-04-09 03:15:24')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:15:24', '2013-04-09 03:15:24')[0m
+  [1m[35m (164.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "username"=>"one"}}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 114ms (Views: 94.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:17:34', '2013-04-09 03:17:34', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:17:34', '2013-04-09 03:17:34', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "users" ("username", "password", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:17:34', '2013-04-09 03:17:34')
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:17:34', '2013-04-09 03:17:34')
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (3.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:17:34', '2013-04-09 03:17:34', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:17:34', '2013-04-09 03:17:34', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:17:34', '2013-04-09 03:17:34')[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:17:34', '2013-04-09 03:17:34')
+  [1m[35m (2.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:17:46', '2013-04-09 03:17:46', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:17:46', '2013-04-09 03:17:46', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:17:46', '2013-04-09 03:17:46')
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:17:46', '2013-04-09 03:17:46')
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "notes"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:17:46', '2013-04-09 03:17:46', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:17:46', '2013-04-09 03:17:46', 298486374)[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:17:46', '2013-04-09 03:17:46')[0m
+SQLite3::SQLException: table users has no column named password: INSERT INTO "users" ("username", "password", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:17:46', '2013-04-09 03:17:46')
+  [1m[35m (2.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:25:49', '2013-04-09 03:25:49', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:25:49', '2013-04-09 03:25:49', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:25:49', '2013-04-09 03:25:49')
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:25:49', '2013-04-09 03:25:49')[0m
+  [1m[35m (276.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (11.0ms)[0m  [1mINSERT INTO "notes" ("body", "created_at", "height", "updated_at", "user_id", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", ""], ["created_at", Tue, 09 Apr 2013 03:25:49 UTC +00:00], ["height", 200], ["updated_at", Tue, 09 Apr 2013 03:25:49 UTC +00:00], ["user_id", nil], ["width", 200], ["x", 0], ["y", 0]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:26:01', '2013-04-09 03:26:01', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:26:01', '2013-04-09 03:26:01', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:26:01', '2013-04-09 03:26:01')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:26:01', '2013-04-09 03:26:01')[0m
+  [1m[35m (167.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Processing by SessionsController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "username"=>"one"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = 'one' LIMIT 1[0m
+Completed 500 Internal Server Error in 20ms
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:31:07', '2013-04-09 03:31:07', 980190962)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:31:07', '2013-04-09 03:31:07', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:31:07', '2013-04-09 03:31:07')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:31:07', '2013-04-09 03:31:07')[0m
+  [1m[35m (102.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (7.0ms)[0m  [1mINSERT INTO "notes" ("body", "created_at", "height", "updated_at", "user_id", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", ""], ["created_at", Tue, 09 Apr 2013 03:31:07 UTC +00:00], ["height", 200], ["updated_at", Tue, 09 Apr 2013 03:31:07 UTC +00:00], ["user_id", nil], ["width", 200], ["x", 0], ["y", 0]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:31:18', '2013-04-09 03:31:18', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:31:18', '2013-04-09 03:31:18', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:31:18', '2013-04-09 03:31:18')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:31:18', '2013-04-09 03:31:18')[0m
+  [1m[35m (104.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Processing by SessionsController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "username"=>"one"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = 'one' LIMIT 1[0m
+Completed 500 Internal Server Error in 31ms
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:32:56', '2013-04-09 03:32:56', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:32:56', '2013-04-09 03:32:56', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:32:56', '2013-04-09 03:32:56')
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:32:56', '2013-04-09 03:32:56')[0m
+  [1m[35m (113.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."username" = 'test' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (11.0ms)[0m  INSERT INTO "users" ("created_at", "password_digest", "updated_at", "username") VALUES (?, ?, ?, ?)  [["created_at", Tue, 09 Apr 2013 03:32:56 UTC +00:00], ["password_digest", "$2a$10$TwC36qZFQ4IZe7UmHeVLnuyYO04nMQ5QHfC/4WvuDhDVzUzPOAVOq"], ["updated_at", Tue, 09 Apr 2013 03:32:56 UTC +00:00], ["username", "test"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "username"=>"test"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."username" = 'test' LIMIT 1
+Redirected to http://test.host/notes
+Completed 302 Found in 226ms (ActiveRecord: 0.0ms)
+  [1m[36m (3.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."username" = 'test' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "users" ("created_at", "password_digest", "updated_at", "username") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 09 Apr 2013 03:32:57 UTC +00:00], ["password_digest", "$2a$10$fVi04FHRqdv.OhWVy9VK.e/W2lUeVbKPs3eEdpinEopcCjqF0UELe"], ["updated_at", Tue, 09 Apr 2013 03:32:57 UTC +00:00], ["username", "test"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (2.0ms)[0m  DELETE FROM "notes"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note one', 10, 10, 100, 100, '2013-04-09 03:34:11', '2013-04-09 03:34:11', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "notes" ("body", "x", "y", "width", "height", "created_at", "updated_at", "id") VALUES ('note two', 20, 20, 100, 200, '2013-04-09 03:34:11', '2013-04-09 03:34:11', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('one', 'one', 1, '2013-04-09 03:34:11', '2013-04-09 03:34:11')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "users" ("username", "password_digest", "id", "created_at", "updated_at") VALUES ('two', 'two', 2, '2013-04-09 03:34:11', '2013-04-09 03:34:11')[0m
+  [1m[35m (146.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."username" = 'test' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (14.0ms)[0m  INSERT INTO "users" ("created_at", "password_digest", "updated_at", "username") VALUES (?, ?, ?, ?)  [["created_at", Tue, 09 Apr 2013 03:34:12 UTC +00:00], ["password_digest", "$2a$10$xart3GMD3xPmco.wkQujDe7toYwp6wxCOEmgX2vjPI53Mz9vT54SW"], ["updated_at", Tue, 09 Apr 2013 03:34:12 UTC +00:00], ["username", "test"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"password"=>"[FILTERED]", "username"=>"test"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."username" = 'test' LIMIT 1
+Redirected to http://test.host/notes
+Completed 302 Found in 217ms (ActiveRecord: 1.0ms)
+  [1m[36m (3.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."username" = 'test' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "password_digest", "updated_at", "username") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 09 Apr 2013 03:34:12 UTC +00:00], ["password_digest", "$2a$10$bF6kJ6sO//F6D1o121UUGesr6N8Z4IK0Q6g229iK8qGDjxBTH8eh2"], ["updated_at", Tue, 09 Apr 2013 03:34:12 UTC +00:00], ["username", "test"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m

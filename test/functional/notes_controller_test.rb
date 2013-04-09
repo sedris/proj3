@@ -1,8 +1,9 @@
 require 'test_helper'
 
 class NotesControllerTest < ActionController::TestCase
-/  setup do
-    @note = notes(:one)
+  setup do
+    @user = User.create(:username => "test", :password => @password )
+    session[:user_id] == @user.id
   end
 
   test "should get index" do

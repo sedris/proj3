@@ -2,7 +2,6 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
-    #@notes = Note.all
     @notes = current_user.notes.all
     
     respond_to do |format|
@@ -21,22 +20,6 @@ class NotesController < ApplicationController
       format.json { render json: @note }
     end
   end
-
-  # GET /notes/new
-  # GET /notes/new.json
-  /def new
-    @note = Note.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @note }
-    end
-  end/
-
-  # GET /notes/1/edit
-  /def edit
-    @note = Note.find(params[:id])
-  end/
 
   # POST /notes
   # POST /notes.json
@@ -63,11 +46,10 @@ class NotesController < ApplicationController
     #updatedNote = {params}
 
     respond_to do |format|
-      #if @note.update_attributes(params[:note])
       if @note.update_attributes(:x => params[:x], :y => params[:y], :body=>params[:body], :width=>params[:width], :height=>params[:height])
-      #if @note.update_note(params[:body], params[:width], params[:height], params[:x], params[:y])
-        format.html { redirect_to @note, notice: 'Note was successfully updated.' }
-        format.json { head :no_content }
+        # TODO: add 'OK' to response??
+        #format.html { redirect_to @note, notice: 'Note was successfully updated.' }
+        #format.json { head :no_content }
       else
         format.html { render action: "edit" }
         format.json { render json: @note.errors, status: :unprocessable_entity }

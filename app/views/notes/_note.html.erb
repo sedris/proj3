@@ -1,19 +1,15 @@
 <script>
+// must send csrf token every time to stay logged in
 $.ajaxSetup({
   beforeSend: function(xhr) {
     xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
   }
 }); 
+
 $(function(){
     $('.stickyNote')
         .draggable({
             stop: function(e, ui) {
-                /*alert('dragging stopped');
-                console.log("e", e);
-                console.log("ui", ui);
-                left = ui.absolutePosition.left;
-                this.top = ui.absolutePosition.top;
-                something = ui.absolutePosition.top;*/
                 $.ajax({
                     url: '/notes/' + $(this).attr('data-noteId'),
                     type: 'PUT',
@@ -21,7 +17,7 @@ $(function(){
                         width: $(this).width(), height: $(this).height(), body: $(this).find('.textarea').html() },
                     dataType: 'json',
                     success: function(data) {
-                        alert('put sent');
+                        //alert('put sent');
                   }
                 });
             }
@@ -40,19 +36,16 @@ $(function(){
                         width: $(this).width(), height: $(this).height(), body: $(this).find('.textarea').html() },
                     dataType: 'json',
                     success: function(data) {
-                        alert('put sent');
+                        //alert('put sent');
                   }
                 });
             }
         });
 
-        // TODO: send updated note content
         var contents = $('.textarea').html();
         $('.textarea').blur(function() {
             if (contents!=$(this).html()){
-                //console.log("updated content", $(this).html());
                 content = $(this).html();
-                console.log('object', $(this).parent().position());
                 var id = $(this).parent().attr('data-noteId');
                 var position = $(this).parent().position();
                 $.ajax({
@@ -62,7 +55,7 @@ $(function(){
                         width: $(this).parent().width(), height: $(this).parent().height(), body: content },
                     dataType: 'json',
                     success: function(data) {
-                        alert('put sent');
+                        //alert('put sent');
                   }
                 });
             }

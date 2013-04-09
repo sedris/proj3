@@ -1,8 +1,3 @@
-//$('.add_note').bind('ajax:success', function(){
-//	add_note();
-//	console.log('added');
-//});
-
 $.ajax({
 success: function(html) {
 console.log("note id", "<%= @note.id %>");
@@ -11,28 +6,10 @@ var add_note = function () {
     $('.stickyNote')
         .draggable({
             stop: function(e, ui) {
-                alert('dragging stopped');
-                console.log("e", e);
-                console.log("ui", ui);
-                left = ui.absolutePosition.left;
-                this.top = ui.absolutePosition.top;
-                console.log("left", left);
-                console.log("top", this.top);
-                console.log("absolutePosition", ui.absolutePosition);
-                console.log("absolutePosition top", ui.absolutePosition.top);
-                console.log("absolutePosition left", ui.absolutePosition.left);
-                something = ui.absolutePosition.top;
-                console.log("something", something);
                 // TODO: send updated location
             }
         })
         .resizable({
-            start: function(e, ui) {
-                //alert('resizing started');
-            },
-            resize: function(e, ui) {
-         
-            },
             stop: function(e, ui) {
                 alert('resizing stopped');
                 // TODO: send updated note dimensions
@@ -42,13 +19,13 @@ var add_note = function () {
         var contents = $('.textarea').html();
         $('.textarea').blur(function() {
             if (contents!=$(this).html()){
-                alert('Handler for .change() called');
-                console.log($(this).html());
                 contents = $(this).html();
             }
         });
 
 }
+
 add_note();
+
 }
 });
