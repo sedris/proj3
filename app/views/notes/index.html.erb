@@ -1,0 +1,10 @@
+
+<br>
+<b><%= link_to 'New Note', notes_url, :method => :post, :remote => true %></b>
+
+<div id = "notes" style="position:relative;">
+    <% @notes.each do |note| %>
+        <%= render note %>
+    <% end %>
+</div>
+

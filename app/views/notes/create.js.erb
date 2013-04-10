@@ -1,0 +1,28 @@
+$.ajax({
+success: function(html) {
+console.log("note id", "<%= @note.id %>");
+var add_note = function () {
+    $('#notes').append('<div class=\'stickyNote\' data-noteId=<%= @note.id %> style=\'position:absolute; left:0px; top:0px\'><div class=\'textarea\' contenteditable=\'true\'></div></div>');
+    $('.stickyNote')
+        .draggable({
+            stop: function(e, ui) {
+            }
+        })
+        .resizable({
+            stop: function(e, ui) {
+                alert('resizing stopped');
+            }
+        });
+        var contents = $('.textarea').html();
+        $('.textarea').blur(function() {
+            if (contents!=$(this).html()){
+                contents = $(this).html();
+            }
+        });
+
+}
+
+add_note();
+
+}
+});

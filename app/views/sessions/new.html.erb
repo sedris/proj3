@@ -1,0 +1,20 @@
+<% if !current_user %>
+<h1>Log in</h1>
+	<%= form_tag sessions_path, :class => "form" do %>
+	<div class= "field">
+		<%= label_tag :username %>
+		<%= text_field_tag :username, params[:username] %>
+	</div>
+
+	<div class= "field">
+		<%= label_tag :password %>
+		<%= password_field_tag :password %>
+	</div>
+
+	<div class = "actions">
+		<%= submit_tag "log in", :class => "submit" %>
+	</div>
+	<% end %>
+<% else %>
+	Logged in
+<% end %>

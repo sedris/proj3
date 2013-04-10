@@ -3,12 +3,12 @@ Project 3: Network Stickies
 
 ###Heroku URL
 
-Please put it here: http://sampleapp.herokuapp.com
+Please put it here: http://damp-headland-1939.herokuapp.com/
 
 ###Notes
 
-Any instructions or notes for your grader should be placed here.
-
+Sample user with notes can be found with username 'test' and password 'test'
+One bug: After clicking 'new note', must refresh the page to interact with it and save changes. But can edit/resize/drag notes already created and changes will be saved.
 
 ###Code Deliverables
 
