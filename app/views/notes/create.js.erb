@@ -1,6 +1,6 @@
 $.ajax({
 success: function(html) {
-console.log("note id", "<%= @note.id %>");
+//console.log("note id", "<%= @note.id %>");
 var add_note = function () {
     $('#notes').append('<div class=\'stickyNote\' data-noteId=<%= @note.id %> style=\'position:absolute; left:0px; top:0px\'><div class=\'textarea\' contenteditable=\'true\'></div></div>');
     $('.stickyNote')
@@ -10,7 +10,7 @@ var add_note = function () {
         })
         .resizable({
             stop: function(e, ui) {
-                alert('resizing stopped');
+                //alert('resizing stopped');
             }
         });
         var contents = $('.textarea').html();

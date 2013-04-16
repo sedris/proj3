@@ -8,8 +8,6 @@ SedrisProj3::Application.routes.draw do
 
   resources :sessions
   resources :users
-
-  resources :boards 
   resources :notes
   
   

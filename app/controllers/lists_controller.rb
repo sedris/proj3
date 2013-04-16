@@ -24,11 +24,12 @@ class ListsController < ApplicationController
   # GET /lists/new
   # GET /lists/new.json
   def new
-    @list = current_user.lists.new
+    @list = current_user.lists.new(params[:list])
 
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @list }
+      format.js { render :layout => false }
     end
   end
 
@@ -46,6 +47,7 @@ class ListsController < ApplicationController
       if @list.save
         format.html { redirect_to @list, notice: 'List was successfully created.' }
         format.json { render json: @list, status: :created, location: @list }
+        format.js { render :layout => false }
       else
         format.html { render action: "new" }
         format.json { render json: @list.errors, status: :unprocessable_entity }
@@ -78,6 +80,7 @@ class ListsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to lists_url }
       format.json { head :no_content }
+      format.js { render :layout => false }
     end
   end
 end
