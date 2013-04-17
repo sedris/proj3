@@ -40,7 +40,7 @@ $(function(){
             }
         });
 
-        // send updated text to server
+/*        // send updated text to server
         var contents = $('.textarea').html();
         $('.textarea').blur(function() {
             if (contents!=$(this).html()){
@@ -59,17 +59,20 @@ $(function(){
                   }
                 });
             }
+        });*/
+
+        $(function(){
+            console.log('page loaded');
+            // for loop through lists on page and add handlers?
         });
 
-        // TODO:
-        // textarea not editable for a task list
-        // bind to clicking enter as well
-        // add ids
         // modified from: http://www.buildfortheweb.com/2010/11/25/create-a-to-do-list-with-jquery/
         add_task = function(event) {
             console.log('add_task clicked', event);
             console.log('this', $(this));
-            //var id = $(this).parent().attr('data-taskId')
+            var list = $(event.target).parent().parent();
+            var list_id = list.attr('data-listId');
+            console.log('list id', list_id);
 
             var taskDescription = $('.description').html();
             if (taskDescription == "") {
@@ -89,14 +92,46 @@ $(function(){
             // put space in description as filler
             $('.description').html("");
             
+            // save task in model
+            $.ajax({
+                url: '/create_task/' + list_id,
+                type: 'POST',
+                data: { _method:'POST', body:taskDescription, complete:false },
+                dataType: 'json',
+                success: function(data) {
+                    //alert('put sent');
+              }
+            });
+
             $('.check_task').unbind('click');
             $('.check_task').click( function() {
                 var task = $(this).parent().parent();
+                var description = task.children('.task_description').html();
                 task.toggleClass('checked');
+                // mark task as complete
                 if (task.hasClass('.checked')) {
                     task.children('.task_description').css('text-decoration', 'line-through');
+                    $.ajax({
+                        url: '/tasks/' + task.attr('data-taskId'),
+                        type: 'PUT',
+                        data: { _method:'PUT', body: description, complete: true},
+                        dataType: 'json',
+                        success: function(data) {
+                            //alert('put sent');
+                      }
+                    });
                 } else {
+                    // mark task as not complete
                     task.children('.task_description').css('text-decoration', 'none');
+                    $.ajax({
+                        url: '/tasks/' + task.attr('data-taskId'),
+                        type: 'PUT',
+                        data: { _method:'PUT', body: description, complete: false},
+                        dataType: 'json',
+                        success: function(data) {
+                            //alert('put sent');
+                      }
+                    });
                 }
             });
 
@@ -133,11 +168,19 @@ $(function(){
         </div>
         <div class="task_list">
             <%list.tasks.each do |task|%>
-            <div class="task" data-taskId="<%= task.id %>">
-                <span><input type="checkbox" class="check_task" name="check_task"/></span>
-                <span class="task_description" > <%=raw task.body%></span>
-                <span class="delete_task" style="float:right;cursor: pointer;"><a>X</a></span>
-            </div>
+            <% if !task.complete%>
+                <div class="task" data-taskId="<%= task.id %>">
+                    <span><input type="checkbox" class="check_task" name="check_task"/></span>
+                    <span class="task_description" > <%=raw task.body%></span>
+                    <span class="delete_task" style="float:right;cursor: pointer;"><a>X</a></span>
+                </div>
+            <% else %>
+                <div class="task checked" data-taskId="<%= task.id %>">
+                    <span><input type="checkbox" class="check_task" name="check_task" checked/></span>
+                    <span class="task_description" style="text-decoration:line-through;" > <%=raw task.body%></span>
+                    <span class="delete_task" style="float:right;cursor: pointer;"><a>X</a></span>
+                </div>
+            <% end %>
             <% end %>
         </div> 
 
