@@ -60,46 +60,24 @@ $(function(){
             }
         });
 
-/*        $('.textarea').unbind('keypress').keypress(function(event) {
-            console.log('event', event)
-            console.log('this', this)
-            if (event.keyCode == 13) {
-                console.log("Handler for .keypress() called.");
-                console.log('this', this);
-                //event.stopPropagation();
-                event.preventDefault();
-                $(event.target).append('<br><input type="checkbox"/><label id="item">&nbsp;</label>'); 
-                //$('<br/><input type="checkbox"/><label id="item">&nbsp;</label>').appendTo(event.target); 
-            }
-        });*/
-
-/*        $('.textarea').unbind('click').click(function(event) {
-            console.log('clicked', event);
-            input = $(event.target);
-            input.focus();
-            tmpStr = input.html();
-            input.html('');
-            input.html(tmpStr);
-        });*/
-
         // TODO:
-        // textarea not editable for a todo list
+        // textarea not editable for a task list
         // bind to clicking enter as well
         // add ids
         // modified from: http://www.buildfortheweb.com/2010/11/25/create-a-to-do-list-with-jquery/
-        add_todo = function(event) {
-            console.log('add_todo clicked', event);
-            var todoDescription = $('.description').html();
-            if (todoDescription == "") {
+        add_task = function(event) {
+            console.log('add_task clicked', event);
+            var taskDescription = $('.description').html();
+            if (taskDescription == "") {
                 return false;
             }
 
-            $('.todo_list').append('<div class="todo">'
+            $('.task_list').append('<div class="task">'
                 + '<span>'
-                    + '<input type="checkbox" class="check_todo" name="check_todo"/>'
+                    + '<input type="checkbox" class="check_task" name="check_task"/>'
                 + '</span>'
-                + '<span class="todo_description">'
-                    + todoDescription
+                + '<span class="task_description">'
+                    + taskDescription
                 + '</span>'
                 + '<span class="delete_task" style="float:right;cursor: pointer;"><a>X</a></span>'
             + '</div>');
@@ -107,14 +85,14 @@ $(function(){
             // put space in description as filler
             $('.description').html("");
             
-            $('.check_todo').unbind('click');
-            $('.check_todo').click( function() {
-                var todo = $(this).parent().parent();
-                todo.toggleClass('checked');
-                if (todo.hasClass('.checked')) {
-                    todo.children('.todo_description').css('text-decoration', 'line-through');
+            $('.check_task').unbind('click');
+            $('.check_task').click( function() {
+                var task = $(this).parent().parent();
+                task.toggleClass('checked');
+                if (task.hasClass('.checked')) {
+                    task.children('.task_description').css('text-decoration', 'line-through');
                 } else {
-                    todo.children('.todo_description').css('text-decoration', 'none');
+                    task.children('.task_description').css('text-decoration', 'none');
                 }
             });
 
@@ -127,33 +105,36 @@ $(function(){
         $('.description').unbind('keypress').keypress( function(event) {
             console.log('keypress', event);
             if (event.keyCode == 13) {
-                console.log("add todo keypress");
+                console.log("add task keypress");
                 //event.stopPropagation();
                 event.preventDefault();
-                add_todo(event);
+                add_task(event);
             }
         });
-        $('.add_todo').unbind('click').click( function(event) {
-            add_todo(event); 
+        $('.add_task').unbind('click').click( function(event) {
+            add_task(event); 
         });  
         
 
 });
 
 </script>
-
 <% if list%>
-<div class="stickyNote" data-noteId="<%= list.id %>" style="position:absolute; top:<%=list.y%>px; left:<%=list.x%>px; width:<%=list.width%>px; height:<%=list.height%>px">
-    <span class="delete_note" style="float:right;"> <%= link_to 'X', list, method: :delete, :remote => true, data: { confirm: 'Are you sure?' } %> </span>
-    <!--<div class='textarea' contenteditable="true">--><div class='textarea'>test
-        <div class="enter_todo">
-                <div class="description" contenteditable="true" style="background-color: white; border: 1px solid;"></div>
-                <button type="button" class="add_todo">Add</button>
-        </div>
+<div class="stickyNote" data-listId="<%= list.id %>" style="position:absolute; top:<%=list.y%>px; left:<%=list.x%>px; width:<%=list.width%>px; height:<%=list.height%>px">
+    <span class="delete_list" style="float:right;"> <%= link_to 'X', list, method: :delete, :remote => true, data: { confirm: 'Are you sure?' } %> </span>
         
-         
-    </div>
-    <div class="todo_list">
+        <div class="enter_task">
+                <div class="description" contenteditable="true" style="background-color: white; border: 1px solid;"></div>
+                <button type="button" class="add_task">Add</button>
+        </div>
+        <div class="task_list">
+            <%list.tasks.each do |task|%>
+            <div class="task" data-taskId="<%= task.id %>">
+                <span><input type="checkbox" class="check_task" name="check_task"/></span>
+                <span class="task_description" > <%=raw task.body%></span>
+                <span class="delete_task" style="float:right;cursor: pointer;"><a>X</a></span>
+            </div>
+            <% end %>
         </div> 
 
 </div>
