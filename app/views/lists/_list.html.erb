@@ -72,14 +72,17 @@ $(function(){
             console.log('this', $(this));
             var list = $(event.target).parent().parent();
             var list_id = list.attr('data-listId');
+            var taskList = list.children('.task_list');
+            var taskDescriptionObject = list.children('.enter_task').children('.description');
+
             console.log('list id', list_id);
 
-            var taskDescription = $('.description').html();
+            var taskDescription = taskDescriptionObject.html();
             if (taskDescription == "") {
                 return false;
             }
 
-            $('.task_list').append('<div class="task">'
+            taskList.append('<div class="task">'
                 + '<span>'
                     + '<input type="checkbox" class="check_task" name="check_task"/>'
                 + '</span>'
@@ -90,7 +93,7 @@ $(function(){
             + '</div>');
             
             // put space in description as filler
-            $('.description').html("");
+            taskDescriptionObject.html("");
             
             // save task in model
             $.ajax({
@@ -172,7 +175,7 @@ $(function(){
                 <div class="task" data-taskId="<%= task.id %>">
                     <span><input type="checkbox" class="check_task" name="check_task"/></span>
                     <span class="task_description" > <%=raw task.body%></span>
-                    <span class="delete_task" style="float:right;"><%= link_to 'X', task, method: :delete, :remote => true, data: { confirm: 'Are you sure?' } %></span>
+                    <span class="delete_task" style="float:right;"><%= link_to 'X', task, method: :delete, :remote => true %></span>
                 </div>
             <% else %>
                 <div class="task checked" data-taskId="<%= task.id %>">

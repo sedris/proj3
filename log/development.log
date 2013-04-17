@@ -73029,3 +73029,1165 @@ Served asset /users.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 22:34:49 -0400
 Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/lists" for 127.0.0.1 at 2013-04-16 22:35:15 -0400
+Processing by ListsController#create as JS
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "lists" ("created_at", "height", "updated_at", "user_id", "width", "x", "y") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 17 Apr 2013 02:35:15 UTC +00:00], ["height", nil], ["updated_at", Wed, 17 Apr 2013 02:35:15 UTC +00:00], ["user_id", 8], ["width", nil], ["x", nil], ["y", nil]]
+  [1m[36m (96.0ms)[0m  [1mcommit transaction[0m
+  Rendered lists/create.js.erb (1.0ms)
+Completed 200 OK in 119ms (Views: 7.0ms | ActiveRecord: 100.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-16 22:36:37 -0400
+Processing by NotesController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = 8[0m
+  [1m[35mList Load (1.0ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8
+  Rendered notes/_note.html.erb (2.0ms)
+  Rendered notes/_note.html.erb (2.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 14[0m
+  Rendered lists/_list.html.erb (6.0ms)
+  [1m[35mTask Load (1.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 17
+  Rendered lists/_list.html.erb (3.0ms)
+  [1m[36mTask Load (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 18[0m
+  Rendered lists/_list.html.erb (3.0ms)
+  Rendered notes/index.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 125ms (Views: 111.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-04-16 22:36:38 -0400
+Served asset /lists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 22:36:38 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-16 22:36:38 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-16 22:36:38 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-16 22:36:38 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 22:36:38 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 22:36:38 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 22:36:38 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 22:36:38 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-04-16 22:36:38 -0400
+Served asset /lists.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-16 22:36:38 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-16 22:36:38 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-16 22:36:38 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 22:36:38 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 22:36:38 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started PUT "/lists/18" for 127.0.0.1 at 2013-04-16 22:36:49 -0400
+Processing by ListsController#update as JSON
+  Parameters: {"x"=>"630", "y"=>"-3", "width"=>"150", "height"=>"150", "id"=>"18"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mList Load (2.0ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (3.0ms)[0m  [1mUPDATE "lists" SET "x" = 630, "y" = -3, "width" = 150, "height" = 150, "updated_at" = '2013-04-17 02:36:49.213781' WHERE "lists"."id" = 18[0m
+  [1m[35m (100.0ms)[0m  commit transaction
+Completed 204 No Content in 116ms (ActiveRecord: 105.0ms)
+
+
+Started PUT "/lists/17" for 127.0.0.1 at 2013-04-16 22:36:50 -0400
+Processing by ListsController#update as JSON
+  Parameters: {"x"=>"605", "y"=>"261", "width"=>"150", "height"=>"150", "id"=>"17"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mList Load (1.0ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", "17"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (3.0ms)[0m  UPDATE "lists" SET "x" = 605, "y" = 261, "width" = 150, "height" = 150, "updated_at" = '2013-04-17 02:36:50.104832' WHERE "lists"."id" = 17
+  [1m[36m (86.0ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 103ms (ActiveRecord: 92.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-16 22:36:56 -0400
+Processing by NotesController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = 8[0m
+  [1m[35mList Load (1.0ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8
+  Rendered notes/_note.html.erb (2.0ms)
+  Rendered notes/_note.html.erb (2.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  [1m[36mTask Load (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 14[0m
+  Rendered lists/_list.html.erb (6.0ms)
+  [1m[35mTask Load (1.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 17
+  Rendered lists/_list.html.erb (4.0ms)
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 18[0m
+  Rendered lists/_list.html.erb (4.0ms)
+  Rendered notes/index.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 126ms (Views: 111.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 22:36:56 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-04-16 22:36:57 -0400
+Served asset /lists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-16 22:36:57 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-16 22:36:57 -0400
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-16 22:36:57 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 22:36:57 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 22:36:57 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 22:36:57 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 22:36:57 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-16 22:36:57 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-04-16 22:36:57 -0400
+Served asset /lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-16 22:36:57 -0400
+Served asset /sessions.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-16 22:36:57 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 22:36:57 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 22:36:57 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started DELETE "/lists/17" for 127.0.0.1 at 2013-04-16 22:37:03 -0400
+Processing by ListsController#destroy as JS
+  Parameters: {"id"=>"17"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mList Load (1.0ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 17[0m
+  [1m[35mSQL (3.0ms)[0m  DELETE FROM "lists" WHERE "lists"."id" = ?  [["id", 17]]
+  [1m[36m (92.0ms)[0m  [1mcommit transaction[0m
+  Rendered lists/destroy.js.erb (0.0ms)
+Completed 200 OK in 116ms (Views: 9.0ms | ActiveRecord: 97.0ms)
+
+
+Started DELETE "/lists/18" for 127.0.0.1 at 2013-04-16 22:43:58 -0400
+Processing by ListsController#destroy as JS
+  Parameters: {"id"=>"18"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mList Load (1.0ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mTask Load (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 18[0m
+  [1m[35mSQL (3.0ms)[0m  DELETE FROM "lists" WHERE "lists"."id" = ?  [["id", 18]]
+  [1m[36m (93.0ms)[0m  [1mcommit transaction[0m
+  Rendered lists/destroy.js.erb (0.0ms)
+Completed 200 OK in 120ms (Views: 13.0ms | ActiveRecord: 98.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-16 22:44:00 -0400
+Processing by NotesController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = 8[0m
+  [1m[35mList Load (1.0ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (2.0ms)
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 14[0m
+  Rendered lists/_list.html.erb (12.0ms)
+  Rendered notes/index.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 105ms (Views: 92.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 22:44:01 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 22:44:01 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-04-16 22:44:01 -0400
+Served asset /lists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-16 22:44:01 -0400
+Served asset /sessions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-16 22:44:01 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-16 22:44:01 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 22:44:01 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 22:44:01 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 22:44:01 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-04-16 22:44:01 -0400
+Served asset /lists.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-16 22:44:01 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-16 22:44:01 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-16 22:44:01 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 22:44:01 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 22:44:01 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/create_task/14" for 127.0.0.1 at 2013-04-16 22:44:08 -0400
+Processing by ListsController#create_task as JSON
+  Parameters: {"body"=>"sdf", "complete"=>"false", "list_id"=>"14"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mList Load (1.0ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8 AND "lists"."id" = 14 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "tasks" ("body", "complete", "created_at", "list_id", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["body", "sdf"], ["complete", false], ["created_at", Wed, 17 Apr 2013 02:44:08 UTC +00:00], ["list_id", 14], ["updated_at", Wed, 17 Apr 2013 02:44:08 UTC +00:00]]
+  [1m[35m (106.0ms)[0m  commit transaction
+Completed 201 Created in 127ms (Views: 1.0ms | ActiveRecord: 112.0ms)
+
+
+Started POST "/create_task/14" for 127.0.0.1 at 2013-04-16 22:44:12 -0400
+Processing by ListsController#create_task as JSON
+  Parameters: {"body"=>"test", "complete"=>"false", "list_id"=>"14"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mList Load (1.0ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8 AND "lists"."id" = 14 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (17.0ms)[0m  INSERT INTO "tasks" ("body", "complete", "created_at", "list_id", "updated_at") VALUES (?, ?, ?, ?, ?)  [["body", "test"], ["complete", false], ["created_at", Wed, 17 Apr 2013 02:44:12 UTC +00:00], ["list_id", 14], ["updated_at", Wed, 17 Apr 2013 02:44:12 UTC +00:00]]
+  [1m[36m (95.0ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 132ms (Views: 1.0ms | ActiveRecord: 114.0ms)
+
+
+Started PUT "/tasks/undefined" for 127.0.0.1 at 2013-04-16 22:44:15 -0400
+Processing by TasksController#update as JSON
+  Parameters: {"body"=>"sdf", "complete"=>"true", "id"=>"undefined"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTask Load (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", "undefined"]]
+Completed 404 Not Found in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Task with id=undefined):
+  app/controllers/tasks_controller.rb:5:in `update'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (58.0ms)
+
+
+Started PUT "/tasks/1" for 127.0.0.1 at 2013-04-16 22:44:51 -0400
+Processing by TasksController#update as JSON
+  Parameters: {"body"=>"    task 1", "complete"=>"true", "id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTask Load (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (3.0ms)[0m  [1mUPDATE "tasks" SET "body" = ' task 1', "complete" = 't', "updated_at" = '2013-04-17 02:44:51.704378' WHERE "tasks"."id" = 1[0m
+  [1m[35m (102.0ms)[0m  commit transaction
+Completed 204 No Content in 120ms (ActiveRecord: 106.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-16 22:44:57 -0400
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."user_id" = 8
+  [1m[36mList Load (1.0ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8[0m
+  Rendered notes/_note.html.erb (2.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  [1m[35mTask Load (1.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 14
+  Rendered lists/_list.html.erb (7.0ms)
+  Rendered notes/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 82ms (Views: 69.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 22:44:58 -0400
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-04-16 22:44:58 -0400
+Served asset /lists.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-16 22:44:58 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 22:44:58 -0400
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-16 22:44:59 -0400
+Served asset /tasks.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-16 22:44:59 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 22:44:59 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 22:44:59 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-04-16 22:44:59 -0400
+Served asset /lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 22:44:59 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-16 22:44:59 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-16 22:44:59 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-16 22:44:59 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 22:44:59 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 22:44:59 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-16 22:45:19 -0400
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."user_id" = 8
+  [1m[36mList Load (1.0ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8[0m
+  Rendered notes/_note.html.erb (2.0ms)
+  Rendered notes/_note.html.erb (3.0ms)
+  Rendered notes/_note.html.erb (2.0ms)
+  [1m[35mTask Load (1.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 14
+  Rendered lists/_list.html.erb (7.0ms)
+  Rendered notes/index.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 104ms (Views: 89.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 22:45:19 -0400
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-16 22:45:19 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-04-16 22:45:19 -0400
+Served asset /lists.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 22:45:20 -0400
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-16 22:45:20 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-16 22:45:20 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 22:45:20 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 22:45:20 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 22:45:20 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-16 22:45:20 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-04-16 22:45:20 -0400
+Served asset /lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-16 22:45:20 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-16 22:45:20 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 22:45:20 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 22:45:20 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started DELETE "/tasks/19" for 127.0.0.1 at 2013-04-16 22:45:49 -0400
+Processing by TasksController#destroy as JS
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mTask Load (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", "19"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "tasks" WHERE "tasks"."id" = ?  [["id", 19]]
+  [1m[36m (78.0ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 96ms
+
+ActionView::MissingTemplate (Missing template tasks/destroy, application/destroy with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "C:/Users/Sarah/Documents/2012-2013/6.170/sedris_proj3/app/views"
+):
+  app/controllers/tasks_controller.rb:24:in `destroy'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-16 22:45:53 -0400
+Processing by NotesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = 8[0m
+  [1m[35mList Load (1.0ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8
+  Rendered notes/_note.html.erb (2.0ms)
+  Rendered notes/_note.html.erb (3.0ms)
+  Rendered notes/_note.html.erb (2.0ms)
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 14[0m
+  Rendered lists/_list.html.erb (6.0ms)
+  Rendered notes/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 83ms (Views: 70.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-04-16 22:45:53 -0400
+Served asset /lists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 22:45:53 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-16 22:45:53 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 22:45:54 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-16 22:45:54 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-16 22:45:54 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 22:45:54 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 22:45:54 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-04-16 22:45:54 -0400
+Served asset /lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 22:45:54 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-16 22:45:54 -0400
+Served asset /notes.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-16 22:45:54 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-16 22:45:54 -0400
+Served asset /tasks.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 22:45:54 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 22:45:54 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/create_task/14" for 127.0.0.1 at 2013-04-16 22:46:00 -0400
+Processing by ListsController#create_task as JSON
+  Parameters: {"body"=>"sdf", "complete"=>"false", "list_id"=>"14"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mList Load (1.0ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8 AND "lists"."id" = 14 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "tasks" ("body", "complete", "created_at", "list_id", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["body", "sdf"], ["complete", false], ["created_at", Wed, 17 Apr 2013 02:46:00 UTC +00:00], ["list_id", 14], ["updated_at", Wed, 17 Apr 2013 02:46:00 UTC +00:00]]
+  [1m[35m (143.0ms)[0m  commit transaction
+Completed 201 Created in 207ms (Views: 1.0ms | ActiveRecord: 149.0ms)
+
+
+Started PUT "/tasks/1" for 127.0.0.1 at 2013-04-16 22:46:01 -0400
+Processing by TasksController#update as JSON
+  Parameters: {"body"=>"     task 1", "complete"=>"false", "id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mTask Load (1.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (3.0ms)[0m  UPDATE "tasks" SET "body" = ' task 1', "complete" = 'f', "updated_at" = '2013-04-17 02:46:01.451367' WHERE "tasks"."id" = 1
+  [1m[36m (88.0ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 102ms (ActiveRecord: 92.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-16 22:46:03 -0400
+Processing by NotesController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = 8[0m
+  [1m[35mList Load (0.0ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 14[0m
+  Rendered lists/_list.html.erb (8.0ms)
+  Rendered notes/index.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 94ms (Views: 79.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:04 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:04 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:04 -0400
+Served asset /lists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:04 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:05 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:05 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:05 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:05 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:05 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:05 -0400
+Served asset /lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:05 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:05 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:05 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:05 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:05 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-16 22:46:15 -0400
+Processing by NotesController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = 8[0m
+  [1m[35mList Load (1.0ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8
+  Rendered notes/_note.html.erb (44.0ms)
+  Rendered notes/_note.html.erb (2.0ms)
+  Rendered notes/_note.html.erb (2.0ms)
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 14[0m
+  Rendered lists/_list.html.erb (10.0ms)
+  [1m[35mTask Load (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 19
+  Rendered lists/_list.html.erb (4.0ms)
+  Rendered notes/index.html.erb within layouts/application (89.0ms)
+Completed 200 OK in 141ms (Views: 127.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:16 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:16 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:16 -0400
+Served asset /lists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:16 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:16 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:16 -0400
+Served asset /notes.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:16 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:16 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:16 -0400
+Served asset /lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:16 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:16 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:16 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:17 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:17 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:17 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/create_task/19" for 127.0.0.1 at 2013-04-16 22:46:23 -0400
+Processing by ListsController#create_task as JSON
+  Parameters: {"body"=>"test", "complete"=>"false", "list_id"=>"19"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mList Load (0.0ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8 AND "lists"."id" = 19 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  INSERT INTO "tasks" ("body", "complete", "created_at", "list_id", "updated_at") VALUES (?, ?, ?, ?, ?)  [["body", "test"], ["complete", false], ["created_at", Wed, 17 Apr 2013 02:46:23 UTC +00:00], ["list_id", 19], ["updated_at", Wed, 17 Apr 2013 02:46:23 UTC +00:00]]
+  [1m[36m (97.0ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 116ms (Views: 1.0ms | ActiveRecord: 102.0ms)
+
+
+Started PUT "/lists/19" for 127.0.0.1 at 2013-04-16 22:46:33 -0400
+Processing by ListsController#update as JSON
+  Parameters: {"x"=>"662", "y"=>"-7", "width"=>"150", "height"=>"150", "id"=>"19"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mList Load (1.0ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", "19"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (3.0ms)[0m  [1mUPDATE "lists" SET "x" = 662, "y" = -7, "width" = 150, "height" = 150, "updated_at" = '2013-04-17 02:46:33.294188' WHERE "lists"."id" = 19[0m
+  [1m[35m (115.0ms)[0m  commit transaction
+Completed 204 No Content in 131ms (ActiveRecord: 119.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-16 22:46:37 -0400
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."user_id" = 8
+  [1m[36mList Load (1.0ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8[0m
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  [1m[35mTask Load (12.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 14
+  Rendered lists/_list.html.erb (19.0ms)
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 19[0m
+  Rendered lists/_list.html.erb (6.0ms)
+  Rendered notes/index.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 147ms (Views: 121.0ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:38 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:38 -0400
+Served asset /lists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:38 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:38 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:38 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:38 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:38 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:38 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:38 -0400
+Served asset /lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:39 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:39 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:39 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:39 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:39 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:39 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/create_task/19" for 127.0.0.1 at 2013-04-16 22:46:45 -0400
+Processing by ListsController#create_task as JSON
+  Parameters: {"body"=>"es", "complete"=>"false", "list_id"=>"19"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mList Load (1.0ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8 AND "lists"."id" = 19 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "tasks" ("body", "complete", "created_at", "list_id", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["body", "es"], ["complete", false], ["created_at", Wed, 17 Apr 2013 02:46:45 UTC +00:00], ["list_id", 19], ["updated_at", Wed, 17 Apr 2013 02:46:45 UTC +00:00]]
+  [1m[35m (154.0ms)[0m  commit transaction
+Completed 201 Created in 174ms (Views: 0.0ms | ActiveRecord: 159.0ms)
+
+
+Started DELETE "/tasks/21" for 127.0.0.1 at 2013-04-16 22:46:50 -0400
+Processing by TasksController#destroy as JS
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mTask Load (2.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", "21"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  DELETE FROM "tasks" WHERE "tasks"."id" = ?  [["id", 21]]
+  [1m[36m (107.0ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 126ms
+
+ActionView::MissingTemplate (Missing template tasks/destroy, application/destroy with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "C:/Users/Sarah/Documents/2012-2013/6.170/sedris_proj3/app/views"
+):
+  app/controllers/tasks_controller.rb:24:in `destroy'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-16 22:46:56 -0400
+Processing by NotesController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = 8[0m
+  [1m[35mList Load (0.0ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 14[0m
+  Rendered lists/_list.html.erb (8.0ms)
+  [1m[35mTask Load (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 19
+  Rendered lists/_list.html.erb (5.0ms)
+  Rendered notes/index.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 116ms (Views: 104.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:57 -0400
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:57 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:57 -0400
+Served asset /lists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:57 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:57 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:57 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 22:46:57 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:57 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:58 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:58 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:58 -0400
+Served asset /lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:58 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:58 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:58 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 22:46:58 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-16 22:47:17 -0400
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mNote Load (2.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."user_id" = 8
+  [1m[36mList Load (1.0ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8[0m
+  Rendered notes/_note.html.erb (2.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  [1m[35mTask Load (1.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 14
+  Rendered lists/_list.html.erb (15.0ms)
+  [1m[36mTask Load (11.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 19[0m
+  Rendered lists/_list.html.erb (16.0ms)
+  Rendered notes/index.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 157ms (Views: 131.0ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-04-16 22:47:18 -0400
+Served asset /lists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 22:47:18 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-16 22:47:18 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-16 22:47:18 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-16 22:47:18 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 22:47:18 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 22:47:18 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 22:47:18 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-04-16 22:47:18 -0400
+Served asset /lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 22:47:18 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-16 22:47:18 -0400
+Served asset /notes.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-16 22:47:18 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-16 22:47:19 -0400
+Served asset /tasks.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 22:47:19 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 22:47:19 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/lists/19" for 127.0.0.1 at 2013-04-16 22:47:23 -0400
+Processing by ListsController#update as JSON
+  Parameters: {"x"=>"662", "y"=>"-8", "width"=>"150", "height"=>"150", "id"=>"19"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mList Load (1.0ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", "19"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (3.0ms)[0m  [1mUPDATE "lists" SET "y" = -8, "updated_at" = '2013-04-17 02:47:23.594065' WHERE "lists"."id" = 19[0m
+  [1m[35m (100.0ms)[0m  commit transaction
+Completed 204 No Content in 114ms (ActiveRecord: 104.0ms)
+
+
+Started POST "/create_task/19" for 127.0.0.1 at 2013-04-16 22:47:25 -0400
+Processing by ListsController#create_task as JSON
+  Parameters: {"body"=>"sdf", "complete"=>"false", "list_id"=>"19"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mList Load (1.0ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8 AND "lists"."id" = 19 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "tasks" ("body", "complete", "created_at", "list_id", "updated_at") VALUES (?, ?, ?, ?, ?)  [["body", "sdf"], ["complete", false], ["created_at", Wed, 17 Apr 2013 02:47:25 UTC +00:00], ["list_id", 19], ["updated_at", Wed, 17 Apr 2013 02:47:25 UTC +00:00]]
+  [1m[36m (101.0ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 121ms (Views: 0.0ms | ActiveRecord: 106.0ms)
+
+
+Started DELETE "/tasks/22" for 127.0.0.1 at 2013-04-16 22:47:27 -0400
+Processing by TasksController#destroy as JS
+  Parameters: {"id"=>"22"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", "22"]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 22]]
+  [1m[35m (201.0ms)[0m  commit transaction
+Completed 500 Internal Server Error in 219ms
+
+ActionView::MissingTemplate (Missing template tasks/destroy, application/destroy with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "C:/Users/Sarah/Documents/2012-2013/6.170/sedris_proj3/app/views"
+):
+  app/controllers/tasks_controller.rb:24:in `destroy'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-16 22:47:30 -0400
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."user_id" = 8
+  [1m[36mList Load (1.0ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8[0m
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  [1m[35mTask Load (1.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 14
+  Rendered lists/_list.html.erb (7.0ms)
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 19[0m
+  Rendered lists/_list.html.erb (7.0ms)
+  Rendered notes/index.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 95ms (Views: 81.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-04-16 22:47:31 -0400
+Served asset /lists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-16 22:47:31 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 22:47:31 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 22:47:31 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-16 22:47:31 -0400
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-16 22:47:31 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 22:47:31 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 22:47:31 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 22:47:31 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-04-16 22:47:32 -0400
+Served asset /lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-16 22:47:32 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-16 22:47:32 -0400
+Served asset /tasks.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-16 22:47:32 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 22:47:32 -0400
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 22:47:32 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started DELETE "/lists/19" for 127.0.0.1 at 2013-04-16 22:47:38 -0400
+Processing by ListsController#destroy as JS
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mList Load (1.0ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", "19"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 19[0m
+  [1m[35mSQL (4.0ms)[0m  DELETE FROM "tasks" WHERE "tasks"."id" = ?  [["id", 23]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "lists" WHERE "lists"."id" = ?[0m  [["id", 19]]
+  [1m[35m (101.0ms)[0m  commit transaction
+  Rendered lists/destroy.js.erb (0.0ms)
+Completed 200 OK in 132ms (Views: 10.0ms | ActiveRecord: 108.0ms)
