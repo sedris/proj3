@@ -82,19 +82,6 @@ $(function(){
                 return false;
             }
 
-            taskList.append('<div class="task">'
-                + '<span>'
-                    + '<input type="checkbox" class="check_task" name="check_task"/>'
-                + '</span>'
-                + '<span class="task_description">'
-                    + taskDescription
-                + '</span>'
-                + '<span class="delete_task" style="float:right;cursor: pointer;"><a>X</a></span>'
-            + '</div>');
-            
-            // put space in description as filler
-            taskDescriptionObject.html("");
-            
             // save task in model
             $.ajax({
                 url: '/create_task/' + list_id,
@@ -103,6 +90,20 @@ $(function(){
                 dataType: 'json',
                 success: function(data) {
                     //alert('put sent');
+                    console.log('task created', data);
+                    
+                    taskList.append('<div class="task" data-taskId=' + data.id + '>'
+                    + '<span>'
+                    + '<input type="checkbox" class="check_task" name="check_task"/>'
+                    + '</span>'
+                    + '<span class="task_description">'
+                    + taskDescription
+                    + '</span>'
+                    + '<span class="delete_task" style="float:right;"><a>X</a></span>'
+                    + '</div>');
+                    
+                    // put space in description as filler
+                    taskDescriptionObject.html("");
               }
             });
 
@@ -138,8 +139,18 @@ $(function(){
                 }
             });
 
-            $('.delete_task').click( function(event) {
+            $('.delete_task').unbind('click').click( function(event) {
                 $(this).parent().remove();
+                console.log('deleting', event);
+/*                $.ajax({
+                    url: '/tasks/' + $(event.target).parent().attr('data-taskId');
+                    type: 'DELETE',
+                    data: { _method:'DELETE', body: description, complete: false},
+                    dataType: 'json',
+                    success: function(data) {
+                        console.log('successfully deleted', data);
+                  }
+                });*/
             });
             return false;
         }

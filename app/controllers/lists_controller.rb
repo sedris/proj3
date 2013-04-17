@@ -46,12 +46,12 @@ class ListsController < ApplicationController
 
     respond_to do |format|
       if @task.save
-        format.html { redirect_to @list, notice: 'Task was successfully created.' }
-        format.json { render json: @list, status: :created, location: @list }
+        format.html { redirect_to @task, notice: 'Task was successfully created.' }
+        format.json { render json: @task, status: :created, location: @task }
         format.js { render :layout => false }
       else
         format.html { render action: "new" }
-        format.json { render json: @list.errors, status: :unprocessable_entity }
+        format.json { render json: @task.errors, status: :unprocessable_entity }
       end
     end
   end
