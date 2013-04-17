@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  title: MyString
-  user: 
+  x: 10
+  y: 10
+  width: 100
+  height: 100
 
 two:
-  title: MyString
-  user: 
+  x: 20
+  y: 20
+  width: 100
+  height: 200

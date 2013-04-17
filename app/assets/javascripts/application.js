@@ -20,12 +20,70 @@ $.ajaxSetup({
     xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
   }
 });
+
+// make stickyNote notes editable and resizable, and update content
+$(function(){
+    $('.stickyNote.note')
+        // send updated position to server
+        .draggable({
+            stop: function(e, ui) {
+                $.ajax({
+                    url: '/notes/' + $(this).attr('data-noteId'),
+                    type: 'PUT',
+                    data: { _method:'PUT', x: $(this).position().left, y: $(this).position().top,
+                        width: $(this).width(), height: $(this).height(), body: $(this).find('.textarea').html() },
+                    dataType: 'json',
+                    success: function(data) {
+                        //alert('put sent');
+                  }
+                });
+            }
+        })
+        // send updated size to server
+        .resizable({
+            stop: function(e, ui) {
+                $.ajax({
+                    url: '/notes/' + $(this).attr('data-noteId'),
+                    type: 'PUT',
+                    data: { _method:'PUT', x: $(this).position().left, y: $(this).position().top,
+                        width: $(this).width(), height: $(this).height(), body: $(this).find('.textarea').html() },
+                    dataType: 'json',
+                    success: function(data) {
+                        //alert('put sent');
+                  }
+                });
+            }
+        });
+
+        // send updated text to server
+        var contents = $('.textarea').html();
+        $('.textarea').blur(function() {
+            if (contents!=$(this).html()){
+                //console.log('contents changed');
+                content = $(this).html();
+                var id = $(this).parent().attr('data-noteId');
+                var position = $(this).parent().position();
+                $.ajax({
+                    url: '/notes/' + id,
+                    type: 'PUT',
+                    data: { _method:'PUT', x: position.left, y: position.top,
+                        width: $(this).parent().width(), height: $(this).parent().height(), body: content },
+                    dataType: 'json',
+                    success: function(data) {
+                        //alert('put sent');
+                  }
+                });
+            }
+        });
+});
+
+// make stickyNote lists draggable and resizable
 $(function(){
     $('.stickyNote.list')
         // send updated position to server
         .draggable({
             stop: function(e, ui) {
-                console.log("dragged", $(this));
+                //console.log("dragged", $(this));
                 $.ajax({
                     url: '/lists/' + $(this).attr('data-listId'),
                     type: 'PUT',
@@ -70,6 +128,7 @@ $(function(){
 });
 // modified from: http://www.buildfortheweb.com/2010/11/25/create-a-to-do-list-with-jquery/
 add_task = function(list) {
+	console.log('adding task', list);
     //var list = $(event.target).parent().parent();
     var list_id = list.attr('data-listId');
     var taskList = list.children('.task_list');
@@ -193,3 +252,4 @@ add_task = function(list) {
     });
     return false;
 }
+

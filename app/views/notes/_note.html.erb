@@ -6,60 +6,7 @@ $.ajaxSetup({
   }
 }); 
 
-$(function(){
-    $('.stickyNote.note')
-        // send updated position to server
-        .draggable({
-            stop: function(e, ui) {
-                $.ajax({
-                    url: '/notes/' + $(this).attr('data-noteId'),
-                    type: 'PUT',
-                    data: { _method:'PUT', x: $(this).position().left, y: $(this).position().top,
-                        width: $(this).width(), height: $(this).height(), body: $(this).find('.textarea').html() },
-                    dataType: 'json',
-                    success: function(data) {
-                        //alert('put sent');
-                  }
-                });
-            }
-        })
-        // send updated size to server
-        .resizable({
-            stop: function(e, ui) {
-                $.ajax({
-                    url: '/notes/' + $(this).attr('data-noteId'),
-                    type: 'PUT',
-                    data: { _method:'PUT', x: $(this).position().left, y: $(this).position().top,
-                        width: $(this).width(), height: $(this).height(), body: $(this).find('.textarea').html() },
-                    dataType: 'json',
-                    success: function(data) {
-                        //alert('put sent');
-                  }
-                });
-            }
-        });
 
-        // send updated text to server
-        var contents = $('.textarea').html();
-        $('.textarea').blur(function() {
-            if (contents!=$(this).html()){
-                console.log('contents changed');
-                content = $(this).html();
-                var id = $(this).parent().attr('data-noteId');
-                var position = $(this).parent().position();
-                $.ajax({
-                    url: '/notes/' + id,
-                    type: 'PUT',
-                    data: { _method:'PUT', x: position.left, y: position.top,
-                        width: $(this).parent().width(), height: $(this).parent().height(), body: content },
-                    dataType: 'json',
-                    success: function(data) {
-                        //alert('put sent');
-                  }
-                });
-            }
-        });
-});
 
 </script>
 <div class="stickyNote note" data-noteId="<%= note.id %>" style="position:absolute; top:<%=note.y%>px; left:<%=note.x%>px; width:<%=note.width%>px; height:<%=note.height%>px">
