@@ -7,7 +7,7 @@ $.ajaxSetup({
 }); 
 
 $(function(){
-    $('.stickyNote')
+    $('.stickyNote.note')
         // send updated position to server
         .draggable({
             stop: function(e, ui) {
@@ -62,7 +62,7 @@ $(function(){
 });
 
 </script>
-<div class="stickyNote" data-noteId="<%= note.id %>" style="position:absolute; top:<%=note.y%>px; left:<%=note.x%>px; width:<%=note.width%>px; height:<%=note.height%>px">
+<div class="stickyNote note" data-noteId="<%= note.id %>" style="position:absolute; top:<%=note.y%>px; left:<%=note.x%>px; width:<%=note.width%>px; height:<%=note.height%>px">
     <span class="delete_note" style="float:right;"> <%= link_to 'X', note, method: :delete, :remote => true, data: { confirm: 'Are you sure?' } %> </span>
     <div class='textarea' contenteditable="true"><%= raw note.body%></div>
 

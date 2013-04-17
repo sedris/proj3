@@ -69199,3 +69199,722 @@ Served asset /sessions.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 20:31:07 -0400
 Served asset /application.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-16 21:10:30 -0400
+Processing by NotesController#index as HTML
+  [1m[35mUser Load (59.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mNote Load (3.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = 8[0m
+  [1m[35mList Load (1.0ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8
+  Rendered notes/_note.html.erb (3.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 14[0m
+  Rendered lists/_list.html.erb (85.0ms)
+  Rendered notes/index.html.erb within layouts/application (111.0ms)
+Completed 200 OK in 1915ms (Views: 281.0ms | ActiveRecord: 242.0ms)
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-04-16 21:12:05 -0400
+Served asset /lists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 21:12:05 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 21:12:05 -0400
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-16 21:12:05 -0400
+Served asset /notes.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-16 21:12:05 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 21:12:05 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 21:12:05 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 21:12:06 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-16 21:12:06 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-04-16 21:12:06 -0400
+Served asset /lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-16 21:12:06 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 21:12:06 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 21:12:06 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started PUT "/notes/67" for 127.0.0.1 at 2013-04-16 21:15:12 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"199", "y"=>"264", "width"=>"200", "height"=>"200", "body"=>"", "id"=>"67"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "67"]]
+  [1m[35m (36.0ms)[0m  begin transaction
+  [1m[36m (18.0ms)[0m  [1mUPDATE "notes" SET "x" = 199, "y" = 264, "updated_at" = '2013-04-17 01:15:12.317152' WHERE "notes"."id" = 67[0m
+  [1m[35m (78.0ms)[0m  commit transaction
+Completed 204 No Content in 562ms (ActiveRecord: 133.0ms)
+
+
+Started PUT "/notes/undefined" for 127.0.0.1 at 2013-04-16 21:15:20 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"2", "y"=>"8", "width"=>"200", "height"=>"200", "body"=>"null", "id"=>"undefined"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mNote Load (0.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1  [["id", "undefined"]]
+Completed 404 Not Found in 61ms
+
+ActiveRecord::RecordNotFound (Couldn't find Note with id=undefined):
+  app/controllers/notes_controller.rb:45:in `update'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (69.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (31.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (185.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-16 21:44:34 -0400
+Connecting to database specified by database.yml
+Processing by NotesController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 483ms (ActiveRecord: 30.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-16 21:44:37 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 791ms (Views: 790.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-04-16 21:44:49 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D/H62vIHs6c+g5qIQGEVXInKpJWt6C0hy5Za4rNMTHM=", "username"=>"test", "password"=>"[FILTERED]", "commit"=>"log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = 'test' LIMIT 1[0m
+Redirected to http://localhost:3000/notes
+Completed 302 Found in 369ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-16 21:44:50 -0400
+Processing by NotesController#index as HTML
+  [1m[35mUser Load (187.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = 8[0m
+  [1m[35mList Load (15.0ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8
+  Rendered notes/_note.html.erb (10.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 14[0m
+  Rendered lists/_list.html.erb (51.0ms)
+  Rendered notes/index.html.erb within layouts/application (132.0ms)
+Completed 200 OK in 1051ms (Views: 202.0ms | ActiveRecord: 207.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 21:44:51 -0400
+Served asset /application.css - 304 Not Modified (87ms)
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-04-16 21:44:51 -0400
+Served asset /lists.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 21:44:51 -0400
+Served asset /scaffolds.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-16 21:44:51 -0400
+Served asset /notes.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-16 21:44:51 -0400
+Served asset /sessions.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 21:44:51 -0400
+Served asset /users.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 21:44:52 -0400
+Served asset /jquery.js - 304 Not Modified (69ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 21:44:52 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-04-16 21:44:52 -0400
+Served asset /lists.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-16 21:44:52 -0400
+Served asset /notes.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-16 21:44:52 -0400
+Served asset /sessions.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 21:44:52 -0400
+Served asset /users.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 21:44:52 -0400
+Served asset /application.js - 304 Not Modified (19ms)
+
+
+Started PUT "/notes/undefined" for 127.0.0.1 at 2013-04-16 21:45:00 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"0", "y"=>"-1", "width"=>"200", "height"=>"200", "body"=>"null", "id"=>"undefined"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "undefined"]]
+Completed 404 Not Found in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Note with id=undefined):
+  app/controllers/notes_controller.rb:45:in `update'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (120.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-16 21:47:44 -0400
+Processing by NotesController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = 8[0m
+  [1m[35mList Load (0.0ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8
+  Rendered notes/_note.html.erb (3.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 14[0m
+  Rendered lists/_list.html.erb (7.0ms)
+  Rendered notes/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 83ms (Views: 71.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 21:47:45 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-04-16 21:47:45 -0400
+Served asset /lists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-16 21:47:45 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 21:47:45 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-16 21:47:45 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 21:47:45 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 21:47:45 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 21:47:45 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-04-16 21:47:45 -0400
+Served asset /lists.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-16 21:47:45 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-16 21:47:45 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 21:47:45 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 21:47:45 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/notes/undefined" for 127.0.0.1 at 2013-04-16 21:47:48 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"110", "y"=>"50", "width"=>"200", "height"=>"200", "body"=>"null", "id"=>"undefined"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "undefined"]]
+Completed 404 Not Found in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find Note with id=undefined):
+  app/controllers/notes_controller.rb:45:in `update'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (49.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-16 21:48:47 -0400
+Processing by NotesController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = 8[0m
+  [1m[35mList Load (1.0ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8
+  Rendered notes/_note.html.erb (2.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (2.0ms)
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 14[0m
+  Rendered lists/_list.html.erb (8.0ms)
+  Rendered notes/index.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 96ms (Views: 81.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 21:48:47 -0400
+Served asset /application.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-04-16 21:48:47 -0400
+Served asset /lists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-16 21:48:48 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 21:48:48 -0400
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-16 21:48:48 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 21:48:48 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 21:48:48 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 21:48:48 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-04-16 21:48:48 -0400
+Served asset /lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-16 21:48:48 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-16 21:48:48 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 21:48:48 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 21:48:48 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started PUT "/notes/undefined" for 127.0.0.1 at 2013-04-16 21:48:50 -0400
+Processing by NotesController#update as JSON
+  Parameters: {"x"=>"321", "y"=>"-22", "width"=>"200", "height"=>"200", "body"=>"null", "id"=>"undefined"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT 1[0m  [["id", "undefined"]]
+Completed 404 Not Found in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find Note with id=undefined):
+  app/controllers/notes_controller.rb:45:in `update'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (55.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-16 21:50:31 -0400
+Processing by NotesController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mNote Load (0.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = 8[0m
+  [1m[35mList Load (1.0ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8
+  Rendered notes/_note.html.erb (3.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  [1m[36mTask Load (2.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 14[0m
+  Rendered lists/_list.html.erb (9.0ms)
+  Rendered notes/index.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 85ms (Views: 73.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 21:50:32 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-04-16 21:50:32 -0400
+Served asset /lists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-16 21:50:32 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-16 21:50:32 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 21:50:32 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 21:50:32 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 21:50:32 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 21:50:32 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-04-16 21:50:32 -0400
+Served asset /lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-16 21:50:32 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-16 21:50:32 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 21:50:33 -0400
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 21:50:33 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started PUT "/lists/14" for 127.0.0.1 at 2013-04-16 21:50:35 -0400
+
+AbstractController::ActionNotFound (The action 'update' could not be found for ListsController):
+  actionpack (3.2.11) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.11) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__450538630__call__159839819__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-16 21:52:07 -0400
+Processing by NotesController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mNote Load (1.0ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = 8[0m
+  [1m[35mList Load (0.0ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8
+  Rendered notes/_note.html.erb (3.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  [1m[36mTask Load (3.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 14[0m
+  Rendered lists/_list.html.erb (45.0ms)
+  Rendered notes/index.html.erb within layouts/application (104.0ms)
+Completed 200 OK in 375ms (Views: 135.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 21:52:08 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-04-16 21:52:08 -0400
+Served asset /lists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-16 21:52:09 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 21:52:09 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 21:52:09 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-16 21:52:09 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 21:52:09 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 21:52:09 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-04-16 21:52:09 -0400
+Served asset /lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-16 21:52:09 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-16 21:52:09 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 21:52:09 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 21:52:09 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started PUT "/lists/14" for 127.0.0.1 at 2013-04-16 21:52:12 -0400
+Processing by ListsController#update as JSON
+  Parameters: {"x"=>"368", "y"=>"14", "width"=>"200", "height"=>"200", "id"=>"14"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mList Load (1.0ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (55.0ms)[0m  [1mUPDATE "lists" SET "x" = 368, "y" = 14, "updated_at" = '2013-04-17 01:52:12.291670' WHERE "lists"."id" = 14[0m
+  [1m[35m (153.0ms)[0m  commit transaction
+Completed 204 No Content in 351ms (ActiveRecord: 210.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-16 21:52:14 -0400
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."user_id" = 8
+  [1m[36mList Load (1.0ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8[0m
+  Rendered notes/_note.html.erb (2.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  [1m[35mTask Load (1.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 14
+  Rendered lists/_list.html.erb (5.0ms)
+  Rendered notes/index.html.erb within layouts/application (78.0ms)
+Completed 200 OK in 123ms (Views: 109.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 21:52:15 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-04-16 21:52:15 -0400
+Served asset /lists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-16 21:52:15 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-16 21:52:15 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 21:52:15 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 21:52:15 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 21:52:15 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 21:52:15 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-04-16 21:52:15 -0400
+Served asset /lists.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-16 21:52:15 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-16 21:52:15 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 21:52:16 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 21:52:16 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started PUT "/lists/14" for 127.0.0.1 at 2013-04-16 21:52:19 -0400
+Processing by ListsController#update as JSON
+  Parameters: {"x"=>"82", "y"=>"67", "width"=>"200", "height"=>"200", "id"=>"14"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mList Load (0.0ms)[0m  SELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1  [["id", "14"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  UPDATE "lists" SET "x" = 82, "y" = 67, "updated_at" = '2013-04-17 01:52:19.116060' WHERE "lists"."id" = 14
+  [1m[36m (190.0ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 265ms (ActiveRecord: 192.0ms)
+
+
+Started PUT "/lists/14" for 127.0.0.1 at 2013-04-16 21:52:20 -0400
+Processing by ListsController#update as JSON
+  Parameters: {"x"=>"82", "y"=>"67", "width"=>"370", "height"=>"162", "id"=>"14"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mList Load (0.0ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (2.0ms)[0m  [1mUPDATE "lists" SET "width" = 370, "height" = 162, "updated_at" = '2013-04-17 01:52:20.693150' WHERE "lists"."id" = 14[0m
+  [1m[35m (131.0ms)[0m  commit transaction
+Completed 204 No Content in 143ms (ActiveRecord: 133.0ms)
+
+
+Started GET "/notes" for 127.0.0.1 at 2013-04-16 21:52:23 -0400
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mNote Load (1.0ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."user_id" = 8
+  [1m[36mList Load (1.0ms)[0m  [1mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = 8[0m
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  Rendered notes/_note.html.erb (1.0ms)
+  [1m[35mTask Load (1.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."list_id" = 14
+  Rendered lists/_list.html.erb (6.0ms)
+  Rendered notes/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 82ms (Views: 69.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/lists.css?body=1" for 127.0.0.1 at 2013-04-16 21:52:24 -0400
+Served asset /lists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-16 21:52:24 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-16 21:52:24 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-16 21:52:24 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at 2013-04-16 21:52:24 -0400
+Served asset /notes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-16 21:52:24 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-16 21:52:24 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-16 21:52:24 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-16 21:52:24 -0400
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at 2013-04-16 21:52:24 -0400
+Served asset /notes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lists.js?body=1" for 127.0.0.1 at 2013-04-16 21:52:25 -0400
+Served asset /lists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-16 21:52:25 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-16 21:52:25 -0400
+Served asset /application.js - 304 Not Modified (2ms)
