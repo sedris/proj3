@@ -172,7 +172,7 @@ $(function(){
                 <div class="task" data-taskId="<%= task.id %>">
                     <span><input type="checkbox" class="check_task" name="check_task"/></span>
                     <span class="task_description" > <%=raw task.body%></span>
-                    <span class="delete_task" style="float:right;cursor: pointer;"><a>X</a></span>
+                    <span class="delete_task" style="float:right;"><%= link_to 'X', task, method: :delete, :remote => true, data: { confirm: 'Are you sure?' } %></span>
                 </div>
             <% else %>
                 <div class="task checked" data-taskId="<%= task.id %>">

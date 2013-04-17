@@ -6,7 +6,6 @@ SedrisProj3::Application.routes.draw do
   get "login" => "sessions#new", :as => "login"
   get "signup" => "users#new", :as => "signup"
   post 'create_task/:list_id/' => 'lists#create_task'
-  delete 'destroy_task/:task_id/' => 'lists#destroy_task'
   resources :sessions
   resources :users
   resources :notes

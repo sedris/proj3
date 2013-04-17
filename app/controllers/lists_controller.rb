@@ -90,19 +90,6 @@ class ListsController < ApplicationController
     end
   end
 
-  # DELETE /task
-  # DELETE /tasks/1.json
-  def destroy_task
-    @task = Task.find(params[:task_id])
-    @task.destroy
-
-    respond_to do |format|
-      format.html { redirect_to lists_url }
-      format.json { head :no_content }
-      format.js { render :layout => false }
-    end
-  end
-
   # DELETE /lists/1
   # DELETE /lists/1.json
   def destroy
