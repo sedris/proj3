@@ -22,9 +22,9 @@ class TasksController < ApplicationController
     @task.destroy
 
     respond_to do |format|
-      format.html #{ redirect_to lists_url }
-      format.json { head :no_content }
-      #format.js { render :layout => false }
+      format.html #{ redirect_to root }
+      format.json { render json: @task }
+      format.js { render :nothing => true }
     end
   end
 end

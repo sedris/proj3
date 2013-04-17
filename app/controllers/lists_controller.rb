@@ -97,7 +97,7 @@ class ListsController < ApplicationController
     @list.destroy
 
     respond_to do |format|
-      format.html { redirect_to lists_url }
+      format.html #{ redirect_to lists_url }
       format.json { head :no_content }
       format.js { render :layout => false }
     end
