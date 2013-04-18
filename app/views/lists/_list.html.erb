@@ -1,0 +1,28 @@
+<% if list%>
+<div class="stickyNote list" data-listId="<%= list.id %>" style="position:absolute; top:<%=list.y%>px; left:<%=list.x%>px; width:<%=list.width%>px; height:<%=list.height%>px">
+    <span class="delete_list" style="float:right;"> <%= link_to 'X', list, method: :delete, :remote => true, data: { confirm: 'Are you sure?' } %> </span>
+        
+        <div class="enter_task">
+                <div class="description" contenteditable="true" style="background-color: white; border: 1px solid;"></div>
+                <button type="button" class="add_task">Add</button>
+        </div>
+        <div class="task_list">
+            <%list.tasks.each do |task|%>
+            <% if !task.complete%>
+                <div class="task" data-taskId="<%= task.id %>">
+                    <span><input type="checkbox" class="check_task" name="check_task"/></span>
+                    <span class="task_description" > <%=raw task.body%></span>
+                    <span class="delete_task" style="float:right;"><a>X</a></span>
+                </div>
+            <% else %>
+                <div class="task checked" data-taskId="<%= task.id %>">
+                    <span><input type="checkbox" class="check_task" name="check_task" checked/></span>
+                    <span class="task_description" style="text-decoration:line-through;" > <%=raw task.body%></span>
+                    <span class="delete_task" style="float:right;cursor: pointer;"><a>X</a></span>
+                </div>
+            <% end %>
+            <% end %>
+        </div> 
+
+</div>
+<% end %>
