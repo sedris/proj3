@@ -1,0 +1,62 @@
+$.ajax({
+success: function(html) {
+//console.log("note id", "<%= @note.id %>");
+var add_note = function () {
+    $('#notes').append('<div class=\'stickyNote note\' data-noteId=<%= @note.id %> style=\'position:absolute; left:0px; top:0px; width:200px; height:200px;\'>'
+        + ' <span class="delete_note" style="float:right;"> <%= link_to "X", @note, method: :delete, :remote => true, data: { confirm: "Are you sure?" } %> </span>'
+        + '<div class=\'textarea\' contenteditable=\'true\'></div></div>');
+    $('.stickyNote.note')
+        .draggable({
+        // send updated position to server
+            stop: function(e, ui) {
+                $.ajax({
+                    url: '/notes/' + $(this).attr('data-noteId'),
+                    type: 'PUT',
+                    data: { _method:'PUT', x: $(this).position().left, y: $(this).position().top,
+                        width: $(this).width(), height: $(this).height(), body: $(this).find('.textarea').html() },
+                    dataType: 'json',
+                    success: function(data) {
+                        //alert('put sent');
+                  }
+                });
+            }
+        })
+        .resizable({
+            stop: function(e, ui) {
+                $.ajax({
+                    url: '/notes/' + $(this).attr('data-noteId'),
+                    type: 'PUT',
+                    data: { _method:'PUT', x: $(this).position().left, y: $(this).position().top,
+                        width: $(this).width(), height: $(this).height(), body: $(this).find('.textarea').html() },
+                    dataType: 'json',
+                    success: function(data) {
+                        //alert('put sent');
+                  }
+                });
+            }
+        });
+        // send updated text to server
+        var contents = $('.textarea').html();
+        $('.textarea').blur(function() {
+            if (contents!=$(this).html()){
+                console.log('contents changed');
+                content = $(this).html();
+                var id = $(this).parent().attr('data-noteId');
+                var position = $(this).parent().position();
+                $.ajax({
+                    url: '/notes/' + id,
+                    type: 'PUT',
+                    data: { _method:'PUT', x: position.left, y: position.top,
+                        width: $(this).parent().width(), height: $(this).parent().height(), body: content },
+                    dataType: 'json',
+                    success: function(data) {
+                        //alert('put sent');
+                  }
+                });
+            }
+        });
+}
+
+add_note();
+}
+});
